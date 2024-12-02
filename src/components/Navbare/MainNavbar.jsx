@@ -37,14 +37,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`shadow-md px-8 py-6 flex items-center justify-evenly sticky top-8 z-10 transition-all duration-300 ${
+      className={`shadow-md px-8 py-2 flex items-center justify-evenly sticky top-8 z-10 transition-all duration-300 h-28 rounded-xl ${
         isScrolled ? 'bg-white' : 'bg-transparent ' // Change bg to white on scroll
       }`}
     >
       {/* Left Side (Logo) */}
       <div className="flex items-center space-x-6">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-28 w-auto" />
+        <img src={logo} alt="Logo" className="h-24 w-auto" />
       </div>
 
       {/* Hamburger Icon for Small Devices */}
