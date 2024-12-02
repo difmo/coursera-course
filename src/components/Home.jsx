@@ -5,21 +5,21 @@ import Gallary from "./ImageSec/Gallary";
 import { FcFeedback } from "react-icons/fc";
 import Feedback from "./Feedback/Feedback";
 import CoursesPopular from "./Our Popular Courses/CoursesPopular";
-import ContactUs from "./Contact/ContactUs";
+import ContactUs from "./Blogs/Contact/ContactUs";
 import OurBlogs from "./Blogs/OurBlogs";
 
 function Home() {
   return (
     <>
       <div>
-        <div className="bg-[#ddfdf2] py-12 px-4 md:px-20  h-[850px]">
+        <div className="bg-[#008ECC] py-12 px-4 md:px-20  h-[850px]">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left Column */}
             <div
               className="flex flex-col justify-center items-start space-y-6 animated fadeInDown"
               data-animation-delay="400"
             >
-              <h2 className="text-3xl md:text-5xl w-full font-semibold text-gray-800 ">
+              <h2 className="text-3xl md:text-5xl w-full font-semibold text-white ">
                 Join Medical Coding, a<span className=""> high-growth </span>
                 career
               </h2>

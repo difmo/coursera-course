@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Feedback = () => {
   const feedbackData = [
     {
-      name: "Tuhina Jawla - CPC",
+      name: 'John Doe',
       description:
         'Odyssey Informatics helped me develop the skills I needed to excel in the industry. The instructors were incredibly knowledgeable and supportive.',
-      image: 'https://via.placeholder.com/150', // Placeholder for image
+      image: 'https://via.placeholder.com/150',
     },
     {
-      name: "Prachi Gupta - CPC",
+      name: 'Jane Smith',
       description:
         'The medical coding training at Odyssey Informatics was comprehensive and engaging. I feel confident in my ability to apply what I’ve learned.',
-      image: 'https://via.placeholder.com/150', // Placeholder for image
+      image: 'https://via.placeholder.com/150',
     },
     {
-      name: "John Doe - CPC",
+      name: 'Alice Johnson',
       description:
-        "Odyssey Informatics helped me develop the skills I needed to excel in the industry. The instructors were incredibly knowledgeable and supportive.",
-      image: "https://via.placeholder.com/150", // Replace with real image URL
+        'I had a great experience with Odyssey Informatics. The curriculum was well-structured, and I appreciated the hands-on approach.',
+      image: 'https://via.placeholder.com/150',
     },
   ];
 
@@ -39,41 +39,52 @@ const Feedback = () => {
   const currentFeedback = feedbackData[currentIndex];
 
   return (
-    <div className="my-16 px-4">
-      {/* Section Header */}
-      <h2 className="text-4xl font-bold text-center text-[#FF8C24] mb-8">
+    <div className="my-16 px-8 relative">
+      {/* Headline */}
+      <h2 className="text-4xl font-semibold text-center text-[#FF8C24] mb-8">
         What Students Are Saying About Odyssey Informatics
       </h2>
 
-      {/* Swiper Carousel */}
-      <Swiper
-        modules={[Pagination, Navigation]}
-        spaceBetween={30}
-        slidesPerView={2}
-        navigation
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1 }, // 1 slide for small screens
-          1024: { slidesPerView: 2 }, // 2 slides for medium screens
-        }}
-        className="py-8"
-      >
-        {feedbackData.map((feedback, index) => (
-          <SwiperSlide key={index}>
-            <div className="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center">
-              <img
-                src={feedback.image}
-                alt={feedback.name}
-                className="w-24 h-24 rounded-full object-cover mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {feedback.name}
+      {/* Feedback Card */}
+      <div className="flex items-center justify-center relative">
+        {/* Left Button */}
+        <button
+          onClick={handlePrev}
+          className="absolute left-0 bg-[#FF8C24] text-white p-3 rounded-full shadow-md hover:bg-[#e67c1f] transition-all duration-300"
+        >
+          &lt;
+        </button>
+
+        {/* Feedback Content */}
+        <div className="bg-white rounded-lg shadow-lg w-[630px] h-[340px] p-6 flex flex-col justify-between">
+          <div className="flex items-center space-x-4">
+            {/* Student Image */}
+            <img
+              src={currentFeedback.image}
+              alt={currentFeedback.name}
+              className="w-20 h-20 rounded-full object-cover"
+            />
+            {/* Student Name */}
+            <div>
+              <h3 className="font-semibold text-2xl text-gray-800">
+                {currentFeedback.name}
               </h3>
-              <p className="text-gray-600">{feedback.description}</p>
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+          </div>
+          {/* Student Description */}
+          <p className="text-gray-600 mt-4 text-lg leading-relaxed">
+            {currentFeedback.description}
+          </p>
+        </div>
+
+        {/* Right Button */}
+        <button
+          onClick={handleNext}
+          className="absolute right-0 bg-[#FF8C24] text-white p-3 rounded-full shadow-md hover:bg-[#e67c1f] transition-all duration-300"
+        >
+          &gt;
+        </button>
+      </div>
     </div>
   );
 };
