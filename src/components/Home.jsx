@@ -5,6 +5,8 @@ import Gallary from "./ImageSec/Gallary";
 import { FcFeedback } from "react-icons/fc";
 import Feedback from "./Feedback/Feedback";
 import CoursesPopular from "./Our Popular Courses/CoursesPopular";
+import ContactUs from "./Contact/ContactUs";
+import OurBlogs from "./Blogs/OurBlogs";
 
 function Home() {
   return (
@@ -90,6 +92,8 @@ function Home() {
       <CoursesPopular />
       <Gallary />
       <Feedback />
+      <ContactUs />
+      <OurBlogs />
     </>
   );
 }

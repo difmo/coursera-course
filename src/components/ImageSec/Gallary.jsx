@@ -36,5 +36,5 @@ const Gallary = () => {
     </div>
   );
 };
-
+// ioiyguhipiqwidegvd
 export default Gallary;
