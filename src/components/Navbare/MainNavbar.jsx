@@ -44,7 +44,7 @@ const Navbar = () => {
       {/* Left Side (Logo) */}
       <div className="flex items-center space-x-6">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-28 w-auto" />
+        <img src={logo} alt="Logo" className="h-24 w-auto" />
       </div>
 
       {/* Hamburger Icon for Small Devices */}

@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper components
+import "swiper/css"; // Import Swiper styles
+import "swiper/css/pagination";
+import { Pagination, Navigation } from "swiper/modules"; // Import Swiper modules
 
 const Feedback = () => {
   const feedbackData = [
@@ -6,13 +10,13 @@ const Feedback = () => {
       name: 'John Doe',
       description:
         'Odyssey Informatics helped me develop the skills I needed to excel in the industry. The instructors were incredibly knowledgeable and supportive.',
-      image: 'https://via.placeholder.com/150',
+      image: 'https://via.placeholder.com/150', // Placeholder for image
     },
     {
       name: 'Jane Smith',
       description:
         'The medical coding training at Odyssey Informatics was comprehensive and engaging. I feel confident in my ability to apply what I’ve learned.',
-      image: 'https://via.placeholder.com/150',
+      image: 'https://via.placeholder.com/150', // Placeholder for image
     },
     {
       name: 'Alice Johnson',

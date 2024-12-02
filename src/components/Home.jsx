@@ -4,6 +4,9 @@ import OurOfferings from "./Landingpages/OurOfferings";
 import Gallary from "./ImageSec/Gallary";
 import { FcFeedback } from "react-icons/fc";
 import Feedback from "./Feedback/Feedback";
+import CoursesPopular from "./Our Popular Courses/CoursesPopular";
+import ContactUs from "./Contact/ContactUs";
+import OurBlogs from "./Blogs/OurBlogs";
 
 function Home() {
   return (
@@ -86,8 +89,11 @@ function Home() {
       {/* uidcbwdvkjbwrgr  */}
       <Home1 />
       <OurOfferings />
+      <CoursesPopular />
       <Gallary />
       <Feedback />
+      <ContactUs />
+      <OurBlogs />
     </>
   );
 }
