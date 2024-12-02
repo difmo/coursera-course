@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`shadow-md px-8 py-6 flex items-center justify-evenly sticky top-8 z-10 transition-all duration-300 ${
+      className={`shadow-md px-8 py-6 flex items-center justify-evenly sticky top-8 z-10 transition-all duration-300 h-36 rounded-xl ${
         isScrolled ? 'bg-white' : 'bg-transparent ' // Change bg to white on scroll
       }`}
     >
