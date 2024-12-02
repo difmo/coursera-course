@@ -1,55 +1,67 @@
-import React from 'react';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper components
+import "swiper/css"; // Import Swiper styles
+import "swiper/css/pagination";
+import { Pagination, Navigation } from "swiper/modules"; // Import Swiper modules
 
 const Feedback = () => {
   const feedbackData = [
     {
-      name: 'John Doe',
+      name: "Tuhina Jawla - CPC",
       description:
-        'Odyssey Informatics helped me develop the skills I needed to excel in the industry. The instructors were incredibly knowledgeable and supportive.',
-      image: 'https://via.placeholder.com/150', // Placeholder for image
+        "Best institute for Medical Coding training with a positive environment. The institute is blessed with hardworking and very supportive trainers who are a constant source of inspiration.",
+      image: "https://via.placeholder.com/150", // Replace with real image URL
     },
     {
-      name: 'Jane Smith',
+      name: "Prachi Gupta - CPC",
       description:
-        'The medical coding training at Odyssey Informatics was comprehensive and engaging. I feel confident in my ability to apply what I’ve learned.',
-      image: 'https://via.placeholder.com/150', // Placeholder for image
+        "My experience at Odyssey has been wonderful. I have learned a lot from my mentors and got guidance during the sessions for exam and interview preparation. I am thankful to Odyssey.",
+      image: "https://via.placeholder.com/150", // Replace with real image URL
     },
     {
-      name: 'Alice Johnson',
+      name: "John Doe - CPC",
       description:
-        'I had a great experience with Odyssey Informatics. The curriculum was well-structured, and I appreciated the hands-on approach.',
-      image: 'https://via.placeholder.com/150', // Placeholder for image
+        "Odyssey Informatics helped me develop the skills I needed to excel in the industry. The instructors were incredibly knowledgeable and supportive.",
+      image: "https://via.placeholder.com/150", // Replace with real image URL
     },
-    // Add more feedback as needed
   ];
 
   return (
-    <div className="my-16 px-8">
-      {/* Headline */}
-      <h2 className="text-4xl font-semibold text-center text-[#FF8C24] mb-8">
+    <div className="my-16 px-4">
+      {/* Section Header */}
+      <h2 className="text-4xl font-bold text-center text-[#FF8C24] mb-8">
         What Students Are Saying About Odyssey Informatics
       </h2>
 
-      {/* Feedback Scroller */}
-      <div className="flex overflow-x-auto space-x-6 pb-4">
+      {/* Swiper Carousel */}
+      <Swiper
+        modules={[Pagination, Navigation]}
+        spaceBetween={30}
+        slidesPerView={2}
+        navigation
+        pagination={{ clickable: true }}
+        breakpoints={{
+          640: { slidesPerView: 1 }, // 1 slide for small screens
+          1024: { slidesPerView: 2 }, // 2 slides for medium screens
+        }}
+        className="py-8"
+      >
         {feedbackData.map((feedback, index) => (
-          <div key={index} className="flex-shrink-0 bg-white rounded-lg shadow-lg w-80 p-6">
-            <div className="flex items-center space-x-4">
-              {/* Student Image */}
+          <SwiperSlide key={index}>
+            <div className="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center">
               <img
                 src={feedback.image}
                 alt={feedback.name}
-                className="w-16 h-16 rounded-full object-cover"
+                className="w-24 h-24 rounded-full object-cover mb-4"
               />
-              {/* Student Name and Description */}
-              <div>
-                <h3 className="font-semibold text-xl text-gray-800">{feedback.name}</h3>
-                <p className="text-gray-600 mt-2">{feedback.description}</p>
-              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {feedback.name}
+              </h3>
+              <p className="text-gray-600">{feedback.description}</p>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 };
