@@ -1,26 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Home from './components/Home'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-            <Routes>
-            <Route element={<Layout />}>
-            
-            <Route path="/" element={<Home />} />
-
-            
-            </Route>
-
-            </Routes>
-
-    </>
-  )
+    <Router>
+      <Routes>
+        {/* This sets up the Layout component as the wrapper for the Home route */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />{" "}
+          {/* 'index' is used for the default route */}
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
