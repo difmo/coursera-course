@@ -65,14 +65,14 @@ const CoursesPopular = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Header Section */}
-      <header className="font-serif py-4 px-8">
-        <h1 className="text-4xl font-bold text-gray-800 flex justify-center">
+      <header className="font-serif py-6 px-4 sm:px-8">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 text-center">
           Our Popular Courses
         </h1>
       </header>
 
       {/* Content Section */}
-      <main className="p-8">
+      <main className="p-4 sm:p-8">
         {/* Course Slider Section */}
         <section>
           <div className="relative">
@@ -85,13 +85,17 @@ const CoursesPopular = () => {
                   <img
                     src={card.imgSrc}
                     alt={card.title}
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-40 sm:h-48 lg:h-56 object-cover rounded-lg"
                   />
-                  <h3 className="text-xl font-semibold">{card.title}</h3>
-                  <p className="text-gray-600 py-4 px-4">{card.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold">
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base px-2 sm:px-4">
+                    {card.description}
+                  </p>
                   <a
                     href={card.link}
-                    className=" text-[#ff8c24] py-5 px-4 rounded-md"
+                    className="text-[#ff8c24] py-2 px-4 rounded-md text-sm sm:text-base"
                   >
                     Read More
                   </a>
@@ -102,48 +106,51 @@ const CoursesPopular = () => {
         </section>
 
         {/* Placement Assistance Section */}
-        <section className="bg-gray-100 mt-16 p-8 rounded">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mt-8 md:mt-0 md:pl-8">
+        <section className="bg-gray-100 mt-16 p-6 sm:p-8 rounded">
+          <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0">
+            <div className="md:w-1/2">
               <img
                 src="https://via.placeholder.com/400x300" // Replace with your image URL
                 alt="Placement Assistance"
-                className="rounded shadow"
+                className="rounded shadow w-full object-cover"
               />
             </div>
-            <div className="md:w-1/2">
-              <h2 className="text-2xl font-bold text-gray-800">
+            <div className="md:w-1/2 text-center md:text-left">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800">
                 100% Placement Assistance
               </h2>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-600 mt-4 text-sm sm:text-base">
                 Odyssey Informatics not only helps you to clear your certificate
                 exam but also provides you with 100% placement assistance.
               </p>
-              <ul className="list-disc list-inside text-gray-600 mt-4">
+              <ul className="list-disc list-inside text-gray-600 mt-4 text-sm sm:text-base">
                 <li>Dedicated HR Cell</li>
                 <li>Collaboration with multinational companies</li>
                 <li>Strong networking with alumni</li>
                 <li>Industry-ready training</li>
               </ul>
-              <button className="mt-6 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+              <button className="mt-6 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm sm:text-base">
                 Discover More
               </button>
             </div>
           </div>
         </section>
       </main>
-      <div>
-        <h1 className="font-bold text-5xl justify-center flex py-5">
+
+      {/* Testimonial Section */}
+      <section className="py-10 px-4 sm:px-8 bg-white">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8">
           What Our Trainees Say
         </h1>
-        <div className="justify-center flex items-center px-32 py-4">
+        <div className="flex justify-center items-center px-4 sm:px-16">
           <Player
             playsInline
             poster="/assets/poster.png"
             src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+            className="w-full sm:w-3/4 lg:w-1/2"
           />
         </div>
-      </div>
+      </section>
     </div>
   );
 };
