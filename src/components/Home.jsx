@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
       <div>
-        <div className="bg-[#ddfdf2] py-12 px-4 md:px-20  h-[8500px]">
+        <div className="bg-[#ddfdf2] py-12 px-4 md:px-20  h-[850px]">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left Column */}
             <div
