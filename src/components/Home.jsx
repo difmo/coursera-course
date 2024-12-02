@@ -1,6 +1,9 @@
 import React from "react";
 import Home1 from "./Landingpages/Why-us";
 import OurOfferings from "./Landingpages/OurOfferings";
+import Gallary from "./ImageSec/Gallary";
+import { FcFeedback } from "react-icons/fc";
+import Feedback from "./Feedback/Feedback";
 
 function Home() {
   return (
@@ -39,7 +42,7 @@ function Home() {
                   <input
                     type="submit"
                     value="Request a Quote"
-                    className=" absolute w-40 bottom-[281px] right-[51%] bg-[#ff8c24] text-white py-3 rounded-md hover:bg-[#ff8c24] transition duration-200"
+                    className=" absolute w-40 bottom-[46px] right-[51%] bg-[#ff8c24] text-white py-3 rounded-md hover:bg-[#ff8c24] transition duration-200"
                   />
                 </div>
               </form>
@@ -63,7 +66,7 @@ function Home() {
                 />
               </div>
 
-              <div className="absolute bottom-0 right-20 w-64  text-center space-y-4 animated fadeInUp">
+              <div className="absolute -bottom-[300PX] right-20 w-64  text-center space-y-4 animated fadeInUp">
                 <div className="bg-white p-4 shadow-lg rounded-lg">
                   <h4 className="text-xl font-semibold text-gray-600">
                     Join Job Integrated Program now & ensure placement
@@ -83,6 +86,8 @@ function Home() {
       {/* uidcbwdvkjbwrgr  */}
       <Home1 />
       <OurOfferings />
+      <Gallary />
+      <Feedback />
     </>
   );
 }
