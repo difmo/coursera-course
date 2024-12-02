@@ -88,10 +88,10 @@ const CoursesPopular = () => {
                     className="w-full h-48 object-cover rounded-lg"
                   />
                   <h3 className="text-xl font-semibold">{card.title}</h3>
-                  <p className="text-gray-600">{card.description}</p>
+                  <p className="text-gray-600 py-4 px-4">{card.description}</p>
                   <a
-                    href={card.link} // You can change this link or provide an action like a modal
-                    className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 text-center"
+                    href={card.link}
+                    className=" text-[#ff8c24] py-5 px-4 rounded-md"
                   >
                     Read More
                   </a>
