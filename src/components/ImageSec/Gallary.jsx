@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Imagesec = () => {
+const Gallary = () => {
   return (
     <div className="py-16">
       <h2 className="text-3xl font-bold text-center mb-8">Image Gallery</h2>
@@ -81,4 +81,4 @@ const Imagesec = () => {
   );
 };
 
-export default Imagesec;
+export default Gallary;
