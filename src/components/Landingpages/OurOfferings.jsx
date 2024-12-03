@@ -19,7 +19,7 @@ const offerings = [
       "https://odysseymt.com/wp-content/uploads/2023/07/1-Medical-Coding-e1689761564720.jpg",
     points: ["ICD-10 AM", "ACHI", "ACS"],
     button: "Read more",
-    link: "MedicalCoding", // Add a unique link for each offering
+    link: "Australiancoding", // Add a unique link for each offering
   },
   {
     id: "3",
@@ -28,7 +28,7 @@ const offerings = [
       "https://odysseymt.com/wp-content/uploads/2023/07/Medical-Billing-Company-Names-e1689762580567.webp",
     points: ["Charge Posting", "Payment Posting", "Account Receivable"],
     button: "Read more",
-    link: "MedicalCoding", // Add a unique link for each offering
+    link: "Medicalbilling", // Add a unique link for each offering
   },
   {
     id: "4",
@@ -37,7 +37,7 @@ const offerings = [
       "https://odysseymt.com/wp-content/uploads/2023/07/maxresdefault-1-1-e1689762204387.jpg",
     points: ["Charge Posting", "Payment Posting", "Account Receivable"],
     button: "Read more",
-    link: "MedicalCoding", // Add a unique link for each offering
+    link: "Medicalcalling", // Add a unique link for each offering
   },
 ];
 
