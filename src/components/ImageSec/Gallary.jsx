@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "../../assets/ImageSec/gallaryimg1.jpg"; // Adjust path based on your folder structure
+import img1 from "../../assets/ImageSec/gallaryimg1.jpg";
 import img2 from "../../assets/ImageSec/gallaryimg2.jpg";
 import img3 from "../../assets/ImageSec/gallaryimg3.jpg";
 import img4 from "../../assets/ImageSec/gallaryimg4.jpg";
@@ -17,7 +17,14 @@ const Gallary = () => {
   ];
 
   return (
-    <div className="py-12 bg-gray-100">
+    <div
+      className="min-h-screen py-12 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('/bg.svg')`,
+        background:'cover', 
+        backgroundSize:'40%,50%'
+      }}
+    >
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 text-indigo-600">
         Image Gallery
       </h2>
