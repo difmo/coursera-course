@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick"; // Import Slider from react-slick
 import "slick-carousel/slick/slick.css"; // Correct import for slick-carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Correct import for slick-carousel theme CSS
-
+import blog from "../../assets/ImageSec/gallaryimg2.jpg";
 import { Player } from "video-react";
 import "video-react/dist/video-react.css";
 const OurBlogs = () => {
@@ -10,31 +10,31 @@ const OurBlogs = () => {
     {
       title: "Card 1",
       description: "This is the description for card 1.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: blog,
       link: "#", // Add a link or action here
     },
     {
       title: "Card 2",
       description: "This is the description for card 2.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: blog,
       link: "#", // Add a link or action here
     },
     {
       title: "Card 3",
       description: "This is the description for card 3.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: blog,
       link: "#", // Add a link or action here
     },
     {
       title: "Card 4",
       description: "This is the description for card 4.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: blog,
       link: "#", // Add a link or action here
     },
     {
       title: "Card 5",
       description: "This is the description for card 5.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: blog,
       link: "#", // Add a link or action here
     },
   ];
