@@ -49,17 +49,15 @@ function ContactUs() {
                   alt={card.title}
                   className="w-24 h-24 object-cover rounded-md"
                 />
-                <h3 className="text-lg sm:text-xl font-semibold">
+                <h3 className="text-2xl md:text-4xl font-semibold">
                   {card.subtitle}
                 </h3>
               </div>
               <h3 className="text-lg sm:text-xl font-bold">{card.title}</h3>
-              <p className="text-gray-600 text-sm sm:text-base">
-                {card.description}
-              </p>
+              <p className="text-gray-600 text-2xl ">{card.description}</p>
               <a
                 href={`tel:${card.mobno}`}
-                className="text-blue-600 text-sm sm:text-base hover:underline"
+                className="text-blue-600 text-xl  hover:underline"
               >
                 {card.mobno}
               </a>

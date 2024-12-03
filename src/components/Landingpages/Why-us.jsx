@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import {
   FaUserGraduate,
@@ -7,6 +8,7 @@ import {
   FaGraduationCap,
   FaClipboardCheck,
   FaUsers,
+  FaCheck,
 } from "react-icons/fa";
 import { Player } from "video-react";
 import "video-react/dist/video-react.css";
@@ -18,22 +20,22 @@ const Home1 = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center py-10 px-4">
           <StatCard
-            icon={<FaUserGraduate className="text-4xl mx-auto" />}
+            icon={<FaUserGraduate className="text-9xl mx-auto" />}
             number="1K+"
             description="Trained"
           />
           <StatCard
-            icon={<FaStarHalfAlt className="text-4xl mx-auto" />}
+            icon={<FaStarHalfAlt className="text-9xl mx-auto" />}
             number="2K+"
             description="Reviews With 4.5/5 Rating"
           />
           <StatCard
-            icon={<FaChalkboardTeacher className="text-4xl mx-auto" />}
+            icon={<FaChalkboardTeacher className="text-9xl mx-auto" />}
             number="4K+"
             description="Live Classes Every Month"
           />
           <StatCard
-            icon={<FaUniversity className="text-4xl mx-auto" />}
+            icon={<FaUniversity className="text-9xl mx-auto" />}
             number="1K+"
             description="College Partner"
           />
@@ -47,11 +49,13 @@ const Home1 = () => {
               alt="Student Thinking"
               className="rounded-xl shadow-lg w-full h-auto"
             />
-            <div className="absolute top-0 left-0 bg-green-500 w-8 h-8 md:w-12 md:h-12 rounded-lg transform -rotate-12 -translate-x-4 -translate-y-4"></div>
-            <div className="absolute bottom-0 right-0 bg-orange-500 w-8 h-8 md:w-12 md:h-12 rounded-lg transform rotate-12 translate-x-4 translate-y-4"></div>
+            {/* <!-- Decorative Shape at Bottom Left --> */}
+            <div className="absolute bottom-0 left-0 bg-green-500 w-8 h-8 md:w-12 md:h-12 rounded-lg transform -rotate-12 -translate-x-2 sm:-translate-x-4 -translate-y-2 sm:-translate-y-4"></div>
+            {/* <!-- Decorative Shape at Top Right --> */}
+            <div className="absolute top-0 right-0 bg-orange-500 w-8 h-8 md:w-12 md:h-12 rounded-lg transform rotate-12 translate-x-2 sm:translate-x-4 translate-y-2 sm:translate-y-4"></div>
           </div>
 
-          <div className="mt-8 md:mt-0 md:ml-8 text-center md:text-left">
+          <div className="mt-8 md:mt-0 md:ml-12 text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
               Why Us <span className="text-orange-500">?</span>
             </h2>
@@ -83,7 +87,8 @@ const Home1 = () => {
             </ul>
             <button className="mt-6 bg-black text-white px-4 md:px-6 py-2 text-sm md:text-lg rounded-md shadow hover:bg-gray-800 transition">
               Discover More →
-            </button>
+            </button>{" "}
+            <div className="flex space-x-4 text-xl"></div>
           </div>
         </div>
 
@@ -103,8 +108,8 @@ const Home1 = () => {
 const StatCard = ({ icon, number, description }) => (
   <div className="p-4">
     {icon}
-    <h3 className="text-3xl md:text-4xl font-serif mt-2">{number}</h3>
-    <p className="text-lg md:text-2xl text-gray-600 mt-1">{description}</p>
+    <h3 className="text-3xl md:text-8xl font-serif mt-2">{number}</h3>
+    <p className="text-2xl md:text-3xl text-gray-600 mt-1">{description}</p>
   </div>
 );
 

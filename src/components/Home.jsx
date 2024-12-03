@@ -46,7 +46,7 @@ function Home() {
             </form>
 
             <div className="flex items-center space-x-4">
-              <p className="text-base sm:text-lg text-white">
+              <p className="text-xl text-white">
                 Over <span className="text-[#ff8c24]">150,000 students</span>{" "}
                 all over the world.
               </p>
@@ -58,7 +58,7 @@ function Home() {
             <img
               src="https://odysseymt.com/wp-content/uploads/elementor/thumbs/girl2-1-q9b1112txcsq911nxoca2ek393shthrou1wkxgc074.png"
               alt="girl"
-              className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] h-auto"
+              className="w-full max-w-[500px] sm:max-w-[400px] md:max-w-[500px] h-auto mx-auto"
             />
 
             <div className="absolute bottom-4 sm:bottom-[-20px] md:bottom-[-50px] w-full sm:w-72 right-0 sm:right-4 bg-white p-4 shadow-lg rounded-lg text-center">

@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick"; // Import Slider from react-slick
 import "slick-carousel/slick/slick.css"; // Correct import for slick-carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Correct import for slick-carousel theme CSS
-
+import courses from "../../assets/ImageSec/gallaryimg1.jpg";
 import { Player } from "video-react";
 import "video-react/dist/video-react.css";
 const CoursesPopular = () => {
@@ -10,31 +10,31 @@ const CoursesPopular = () => {
     {
       title: "Card 1",
       description: "This is the description for card 1.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: courses,
       link: "#", // Add a link or action here
     },
     {
       title: "Card 2",
       description: "This is the description for card 2.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: courses,
       link: "#", // Add a link or action here
     },
     {
       title: "Card 3",
       description: "This is the description for card 3.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: courses,
       link: "#", // Add a link or action here
     },
     {
       title: "Card 4",
       description: "This is the description for card 4.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: courses,
       link: "#", // Add a link or action here
     },
     {
       title: "Card 5",
       description: "This is the description for card 5.",
-      imgSrc: "https://via.placeholder.com/300x200",
+      imgSrc: courses,
       link: "#", // Add a link or action here
     },
   ];
@@ -107,29 +107,29 @@ const CoursesPopular = () => {
 
         {/* Placement Assistance Section */}
         <section className="bg-gray-100 mt-16 p-6 sm:p-8 rounded">
-          <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0">
+          <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 ">
             <div className="md:w-1/2">
               <img
-                src="https://via.placeholder.com/400x300" // Replace with your image URL
+                src={courses} // Replace with your image URL
                 alt="Placement Assistance"
                 className="rounded shadow w-full object-cover"
               />
             </div>
-            <div className="md:w-1/2 text-center md:text-left">
+            <div className="md:w-1/2  px-7 text-center md:text-left">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800">
                 100% Placement Assistance
               </h2>
-              <p className="text-gray-600 mt-4 text-sm sm:text-base">
+              <p className="text-gray-600 mt-4 text-xl">
                 Odyssey Informatics not only helps you to clear your certificate
                 exam but also provides you with 100% placement assistance.
               </p>
-              <ul className="list-disc list-inside text-gray-600 mt-4 text-sm sm:text-base">
+              <ul className="list-disc list-inside text-gray-600 mt-4 text-xl">
                 <li>Dedicated HR Cell</li>
                 <li>Collaboration with multinational companies</li>
                 <li>Strong networking with alumni</li>
                 <li>Industry-ready training</li>
               </ul>
-              <button className="mt-6 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm sm:text-base">
+              <button className="mt-6 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-xl">
                 Discover More
               </button>
             </div>
