@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 // import MainNavbar from "../Navbare/MainNavbar";
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbare/MainNavbar";
+import EnrollNow from "../EnrollNow/EnrollNow";
 
 function Layout({ children }) {
   return (
@@ -12,6 +13,7 @@ function Layout({ children }) {
         {children}
         <Outlet />
       </main>
+      <EnrollNow />
       <Footer />
     </div>
   );

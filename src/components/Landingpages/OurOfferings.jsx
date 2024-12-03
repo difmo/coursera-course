@@ -1,14 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const offerings = [
   {
     id: "1",
-    title: "Medical Coding",
+    title: "MedicalCoding",
     image:
       "https://odysseymt.com/wp-content/uploads/2023/07/1-Medical-Coding-e1689761564720.jpg",
     points: ["ICD-10 CM", "CPT-4", "HCPCS codes"],
     button: "Read more",
+    link: "MedicalCoding", // Add a unique link for each offering
   },
   {
     id: "2",
@@ -17,6 +19,7 @@ const offerings = [
       "https://odysseymt.com/wp-content/uploads/2023/07/1-Medical-Coding-e1689761564720.jpg",
     points: ["ICD-10 AM", "ACHI", "ACS"],
     button: "Read more",
+    link: "Australiancoding", // Add a unique link for each offering
   },
   {
     id: "3",
@@ -25,6 +28,7 @@ const offerings = [
       "https://odysseymt.com/wp-content/uploads/2023/07/Medical-Billing-Company-Names-e1689762580567.webp",
     points: ["Charge Posting", "Payment Posting", "Account Receivable"],
     button: "Read more",
+    link: "Medicalbilling", // Add a unique link for each offering
   },
   {
     id: "4",
@@ -33,10 +37,17 @@ const offerings = [
       "https://odysseymt.com/wp-content/uploads/2023/07/maxresdefault-1-1-e1689762204387.jpg",
     points: ["Charge Posting", "Payment Posting", "Account Receivable"],
     button: "Read more",
+    link: "Medicalcalling", // Add a unique link for each offering
   },
 ];
 
 const OurOfferings = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (link) => {
+    navigate(link);
+  };
+
   return (
     <div className="bg-gray-100 py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +82,10 @@ const OurOfferings = () => {
                     <li key={idx}>{point}</li>
                   ))}
                 </ul>
-                <button className="bg-indigo-600 text-white py-2 px-4 text-sm sm:text-base rounded-md hover:bg-indigo-500 transition-colors duration-300 w-full">
+                <button
+                  onClick={() => handleClick(offering.link)} // Call handleClick with the offering's link
+                  className="bg-indigo-600 text-white py-2 px-4 text-sm sm:text-base rounded-md hover:bg-indigo-500 transition-colors duration-300 w-full"
+                >
                   {offering.button}
                 </button>
               </div>

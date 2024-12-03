@@ -6,13 +6,12 @@ import Feedback from "./Feedback/Feedback";
 import CoursesPopular from "./Our Popular Courses/CoursesPopular";
 import ContactUs from "./Blogs/Contact/ContactUs";
 import OurBlogs from "./Blogs/OurBlogs";
-
-
+// import ClassroomTrain from "./MedicalCoding/ClassroomTrain";
 
 function Home() {
   return (
     <>
-      <div className="bg-[#008ECC] pt-28 md:pt-28 py-12 px-4 md:px-20 h-auto flex items-center">
+      <div className="bg-[#008ECC] pt-28 md:pt-28  px-4 md:px-20 h-auto flex items-center ">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
           <div className="flex flex-col justify-center items-start space-y-6">
@@ -74,7 +73,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <Home1 />
       <OurOfferings />
       <CoursesPopular />
@@ -82,6 +80,7 @@ function Home() {
       <Feedback />
       <ContactUs />
       <OurBlogs />
+      {/* <ClassroomTrain /> */}
     </>
   );
 }

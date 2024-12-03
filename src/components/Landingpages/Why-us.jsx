@@ -20,22 +20,26 @@ const Home1 = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center py-10 px-4">
           <StatCard
-            icon={<FaUserGraduate className="text-9xl mx-auto" />}
+            icon={
+              <FaUserGraduate className="text-9xl mx-auto  text-gray-600" />
+            }
             number="1K+"
             description="Trained"
           />
           <StatCard
-            icon={<FaStarHalfAlt className="text-9xl mx-auto" />}
+            icon={<FaStarHalfAlt className="text-9xl mx-auto  text-gray-600" />}
             number="2K+"
             description="Reviews With 4.5/5 Rating"
           />
           <StatCard
-            icon={<FaChalkboardTeacher className="text-9xl mx-auto" />}
+            icon={
+              <FaChalkboardTeacher className="text-9xl mx-auto  text-gray-600" />
+            }
             number="4K+"
             description="Live Classes Every Month"
           />
           <StatCard
-            icon={<FaUniversity className="text-9xl mx-auto" />}
+            icon={<FaUniversity className="text-9xl mx-auto  text-gray-600" />}
             number="1K+"
             description="College Partner"
           />
@@ -108,7 +112,9 @@ const Home1 = () => {
 const StatCard = ({ icon, number, description }) => (
   <div className="p-4">
     {icon}
-    <h3 className="text-3xl md:text-8xl font-serif mt-2">{number}</h3>
+    <h3 className="text-3xl md:text-8xl font-serif mt-2  text-gray-600">
+      {number}
+    </h3>
     <p className="text-2xl md:text-3xl text-gray-600 mt-1">{description}</p>
   </div>
 );

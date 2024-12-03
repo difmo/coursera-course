@@ -115,7 +115,7 @@ const CoursesPopular = () => {
                 className="rounded shadow w-full object-cover"
               />
             </div>
-            <div className="md:w-1/2  px-7 text-center md:text-left">
+            <div className="md:w-1/2  px-7 md:text-center lg:text-left">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800">
                 100% Placement Assistance
               </h2>
@@ -125,7 +125,7 @@ const CoursesPopular = () => {
               </p>
               <ul className="list-disc list-inside text-gray-600 mt-4 text-xl">
                 <li>Dedicated HR Cell</li>
-                <li>Collaboration with multinational companies</li>
+                <li>Collaboration with multmd:inational companies</li>
                 <li>Strong networking with alumni</li>
                 <li>Industry-ready training</li>
               </ul>

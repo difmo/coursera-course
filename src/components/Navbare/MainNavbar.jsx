@@ -67,13 +67,13 @@ const Navbar = () => {
             }`}
           >
             <a
-              href="#online-training"
+              href="Onlinetraining"
               className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
             >
               Online Training
             </a>
             <a
-              href="#classroom-training"
+              href="ClassroomTrain"
               className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
             >
               Classroom Training
