@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import logo from '../../assets/logo.png'; // Correct relative path
+import React, { useState, useEffect } from "react";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -9,155 +9,142 @@ const Navbar = () => {
   let dropdownTimeout;
 
   const handleMouseEnter = () => {
-    // Clear the timeout if any exists to prevent sudden closing
     if (dropdownTimeout) clearTimeout(dropdownTimeout);
     setDropdownOpen(true);
   };
 
   const handleMouseLeave = () => {
-    // Set a timeout to close the dropdown after 300ms when mouse leaves
     dropdownTimeout = setTimeout(() => {
       setDropdownOpen(false);
     }, 300); // Delay of 300ms
   };
 
-  // Add scroll event listener to change navbar's background color
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`shadow-md px-8 py-6 flex items-center justify-evenly sticky top-8 z-10 transition-all duration-300 ${
-        isScrolled ? 'bg-white' : 'bg-transparent ' // Change bg to white on scroll
+      className={`px-4 md:px-8 py-3 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      {/* Left Side (Logo) */}
-      <div className="flex items-center space-x-6">
-        {/* Logo */}
-        <img src={logo} alt="Logo" className="h-24 w-auto" />
+      {/* Logo */}
+      <div className="flex items-center space-x-4">
+        <img src={logo} alt="Logo" className="h-16 md:h-20" />
       </div>
 
-      {/* Hamburger Icon for Small Devices */}
-      <div className="md:hidden flex items-center" onClick={() => setMenuOpen(!menuOpen)}>
-        <span className="text-[#FF8C24] text-4xl">
-          {menuOpen ? '✖' : '☰'} {/* Toggle between hamburger and cross icon */}
-        </span>
+      {/* Hamburger Icon */}
+      <div className="md:hidden flex items-center">
+        <button
+          className="text-3xl text-[#FF8C24] focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✖" : "☰"}
+        </button>
       </div>
 
-      {/* Right Side - Full Menu (Hidden on small devices) */}
-      <div className="hidden md:flex items-center space-x-10">
-        {/* Dropdown Menu */}
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center space-x-8">
+        {/* Dropdown */}
         <div
           className="relative group"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <a
-            href="#"
-            className="text-gray-700 font-medium hover:text-[#FF8C24] flex items-center text-xl"
-          >
+          <button className="text-gray-700 text-lg font-medium hover:text-[#FF8C24] flex items-center">
             Medical Coding Training
-            <span className="ml-2">
-              {dropdownOpen ? '▲' : '▼'}
-            </span>
-          </a>
+            <span className="ml-1">{dropdownOpen ? "▲" : "▼"}</span>
+          </button>
           <div
-            className={`absolute left-0 mt-2 bg-white shadow-lg rounded-md transition-opacity duration-300 ${
-              dropdownOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            className={`absolute left-0 mt-2 bg-white shadow-lg rounded-lg transition-opacity duration-300 ${
+              dropdownOpen ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
             <a
               href="#online-training"
-              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-xl"
+              className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
             >
               Online Training
             </a>
             <a
               href="#classroom-training"
-              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-xl"
+              className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
             >
               Classroom Training
             </a>
           </div>
         </div>
 
-        {/* Other Navigation Links */}
         <a
           href="#our-courses"
-          className="text-gray-700 font-medium hover:text-[#FF8C24] text-xl"
+          className="text-gray-700 text-lg font-medium hover:text-[#FF8C24]"
         >
           Our Courses
         </a>
         <a
           href="#placement"
-          className="text-gray-700 font-medium hover:text-[#FF8C24] text-xl"
+          className="text-gray-700 text-lg font-medium hover:text-[#FF8C24]"
         >
           Placement
         </a>
         <a
           href="#australian-coding"
-          className="text-[#FF8C24] font-medium text-xl"
+          className="text-[#FF8C24] text-lg font-medium"
         >
           Australian Coding
         </a>
       </div>
 
-      {/* Mobile Menu (hidden by default, shown when menuOpen is true) */}
-      <div
-        className={`md:hidden absolute top-16 left-0 w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
-          menuOpen ? 'block' : 'hidden'
-        }`}
-      >
-        <a
-          href="#online-training"
-          className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-xl"
-        >
-          Online Training
-        </a>
-        <a
-          href="#classroom-training"
-          className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-xl"
-        >
-          Classroom Training
-        </a>
-        <a
-          href="#our-courses"
-          className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-xl"
-        >
-          Our Courses
-        </a>
-        <a
-          href="#placement"
-          className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-xl"
-        >
-          Placement
-        </a>
-        <a
-          href="#australian-coding"
-          className="block px-6 py-3 text-[#FF8C24] font-medium text-xl"
-        >
-          Australian Coding
-        </a>
-        <div className="px-6 py-3">
-          <button className="bg-[#FF8C24] text-white px-6 py-3 text-xl rounded-md shadow-md hover:bg-[#FF7A19]">
-            Enroll Me
-          </button>
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
+          <a
+            href="#online-training"
+            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+          >
+            Online Training
+          </a>
+          <a
+            href="#classroom-training"
+            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+          >
+            Classroom Training
+          </a>
+          <a
+            href="#our-courses"
+            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+          >
+            Our Courses
+          </a>
+          <a
+            href="#placement"
+            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+          >
+            Placement
+          </a>
+          <a
+            href="#australian-coding"
+            className="block px-6 py-3 text-[#FF8C24] font-medium text-lg"
+          >
+            Australian Coding
+          </a>
+          <div className="px-6 py-3">
+            <button className="bg-[#FF8C24] w-full text-white py-3 text-lg rounded-md hover:bg-[#FF7A19]">
+              Enroll Me
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Enroll Me Button (Hidden on small devices, shown on larger ones) */}
+      {/* Enroll Button */}
       <div className="hidden md:block">
-        <button className="bg-[#FF8C24] text-white w-44 h-14 px-6 py-3 text-xl rounded-md shadow-md hover:bg-[#FF7A19]">
+        <button className="bg-[#FF8C24] text-white px-6 py-3 rounded-md text-lg hover:bg-[#FF7A19]">
           Enroll Now
         </button>
       </div>

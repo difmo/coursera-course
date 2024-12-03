@@ -17,18 +17,22 @@ const Gallary = () => {
   ];
 
   return (
-    <div className="py-16">
-      <h2 className="text-5xl font-bold text-center mb-8">Image Gallery</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 px-6 ">
+    <div className="py-12 bg-gray-100">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 text-indigo-600">
+        Image Gallery
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8">
         {images.map((image, index) => (
-          <div key={index} className="relative group ">
+          <div key={index} className="relative group">
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-72 object-cover "
+              className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-md"
             />
             <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-4xl">+</span>
+              <span className="text-white text-2xl sm:text-3xl lg:text-4xl">
+                +
+              </span>
             </div>
           </div>
         ))}
@@ -36,5 +40,5 @@ const Gallary = () => {
     </div>
   );
 };
-// ioiyguhipiqwidegvd
+
 export default Gallary;

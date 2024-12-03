@@ -30,32 +30,40 @@ const cards = [
 function ContactUs() {
   return (
     <>
-      <div className="flex justify-center text-4xl font-bold py-5">
-        <h1>Contanct Us</h1>
-      </div>
-      <div className="grid md:grid-cols-3 gap-6 px-20 py-10">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className="p-4 rounded-lg shadow-lg bg-white flex flex-col  space-y-4"
-          >
-            <div className="flex  ">
-              <div>
+      <div className="bg-gray-50 py-10">
+        {/* Header */}
+        <div className="flex justify-center text-3xl sm:text-4xl font-bold py-5">
+          <h1>Contact Us</h1>
+        </div>
+
+        {/* Contact Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-12 lg:px-20">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="p-4 rounded-lg shadow-lg bg-white flex flex-col space-y-4"
+            >
+              <div className="flex items-center space-x-4">
                 <img
                   src={card.imgSrc}
                   alt={card.title}
-                  className="w-32 h-20 object-cover "
+                  className="w-24 h-24 object-cover rounded-md"
                 />
+                <h3 className="text-2xl md:text-4xl font-semibold">
+                  {card.subtitle}
+                </h3>
               </div>
-              <div>
-                <h3 className="text-2xl px-3 py-3">{card.subtitle}</h3>
-              </div>
+              <h3 className="text-lg sm:text-xl font-bold">{card.title}</h3>
+              <p className="text-gray-600 text-2xl ">{card.description}</p>
+              <a
+                href={`tel:${card.mobno}`}
+                className="text-blue-600 text-xl  hover:underline"
+              >
+                {card.mobno}
+              </a>
             </div>
-            <h3 className="text-xl font-semibold">{card.title}</h3>
-            <p className="text-gray-600 text-xl">{card.description}</p>
-            <a className="text-gray-600 text-xl">{card.mobno} </a>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );
