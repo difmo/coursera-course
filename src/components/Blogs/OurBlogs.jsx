@@ -63,7 +63,7 @@ const OurBlogs = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 py-6">
       {/* Header Section */}
       <header className="font-serif py-4 px-8">
         <h1 className="text-4xl font-bold text-gray-800 flex justify-center">
