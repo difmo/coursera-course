@@ -83,7 +83,7 @@ function Home() {
       <ContactUs />
       <OurBlogs />
       {/* <Onlinetraining />{" "} */}
-      <MedicalCoding />
+      {/* <MedicalCoding /> */}
     </>
   );
 }
