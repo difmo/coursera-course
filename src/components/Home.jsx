@@ -82,7 +82,6 @@ function Home() {
       <Feedback />
       <ContactUs />
       <OurBlogs />
-      
     </>
   );
 }
