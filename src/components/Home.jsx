@@ -7,6 +7,8 @@ import CoursesPopular from "./Our Popular Courses/CoursesPopular";
 import ContactUs from "./Blogs/Contact/ContactUs";
 import OurBlogs from "./Blogs/OurBlogs";
 // import Onlinetraining from "./MedicalCoding/Onlinetraining";
+import MedicalCoding from "./ReadMorePages/Medicalcoding";
+
 
 function Home() {
   return (
@@ -81,6 +83,7 @@ function Home() {
       <ContactUs />
       <OurBlogs />
       {/* <Onlinetraining />{" "} */}
+      <MedicalCoding />
     </>
   );
 }
