@@ -82,7 +82,7 @@ function Home() {
       <Feedback />
       <ContactUs />
       <OurBlogs />
-      <MedicalCoding />
+      
     </>
   );
 }
