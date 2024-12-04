@@ -11,10 +11,16 @@ import OurBlogs from "./Blogs/OurBlogs";
 function Home() {
   return (
     <>
-      <div className="bg-[#008ECC] pt-28 md:pt-28  px-4 md:px-20 h-auto flex items-center ">
+      <div className="bg-[#008ECC]  px-4 md:px-20 h-auto flex items-center ">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
-          <div className="flex flex-col justify-center items-start space-y-6">
+          <div className="flex flex-col justify-center items-start space-y-6"
+          style={{
+            backgroundImage: `url('/bg.svg')`,
+            background:'cover', 
+            backgroundSize:'100%',
+            backgroundRepeat: 'no-repeat',
+          }}>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
               Join Medical Coding, a{" "}
               <span className="text-[#ff8c24]">high-growth</span> career

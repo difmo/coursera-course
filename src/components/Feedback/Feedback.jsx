@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper components
-import "swiper/css"; // Import Swiper styles
-import "swiper/css/pagination";
-import { Pagination, Navigation } from "swiper/modules"; // Import Swiper modules
 
 const Feedback = () => {
   const feedbackData = [
@@ -11,21 +7,21 @@ const Feedback = () => {
       description:
         "Odyssey Informatics helped me develop the skills I needed to excel in the industry. The instructors were incredibly knowledgeable and supportive.",
       image:
-        "https://odysseymt.com/wp-content/uploads/2023/07/Flag_of_India.svg.webp", // Placeholder for image
+        "https://tse1.mm.bing.net/th?id=OIP.zg8PeiMn0oQApeDAckXsHAHaIY&pid=Api&P=0&h=180",
     },
     {
       name: "Jane Smith",
       description:
         "The medical coding training at Odyssey Informatics was comprehensive and engaging. I feel confident in my ability to apply what I’ve learned.",
       image:
-        "https://odysseymt.com/wp-content/uploads/2023/07/Flag_of_India.svg.webp", // Placeholder for image
+        "https://tse4.mm.bing.net/th?id=OIP.PEGPSahgXhP1IUYdX4X4KgHaHi&pid=Api&P=0&h=180",
     },
     {
       name: "Alice Johnson",
       description:
         "I had a great experience with Odyssey Informatics. The curriculum was well-structured, and I appreciated the hands-on approach.",
       image:
-        "https://odysseymt.com/wp-content/uploads/2023/07/Flag_of_India.svg.webp",
+        "https://tse2.mm.bing.net/th?id=OIP.-7WoTpYEPjnccwC4iK383AHaHa&pid=Api&P=0&h=180",
     },
   ];
 
@@ -46,51 +42,61 @@ const Feedback = () => {
   const currentFeedback = feedbackData[currentIndex];
 
   return (
-    <div className="my-16 px-4 sm:px-8 relative">
+    <div className="my-16 px-4 sm:px-8 relative ">
       {/* Headline */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-[#FF8C24] mb-8">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-[#FF8C24] mb-8 ">
         What Students Are Saying About Odyssey Informatics
       </h2>
 
       {/* Feedback Card */}
-      <div className="flex items-center justify-center relative">
-        {/* Left Button */}
-        <button
-          onClick={handlePrev}
-          className="absolute left-2 sm:left-4 bg-gray-200 hover:bg-gray-300 text-black p-2 sm:p-3 rounded-full shadow-md transition-all duration-300"
-        >
-          &lt;
-        </button>
-
-        {/* Feedback Content */}
-        <div className="bg-white rounded-lg shadow-lg w-full sm:w-[500px] md:w-[630px] h-auto sm:h-[340px] p-4 sm:p-6 flex flex-col justify-between">
-          <div className="flex items-center space-x-4">
+      <div className="relative flex flex-col items-center ">
+        <div className="bg-[#008ECC] rounded-lg shadow-lg w-full sm:w-[700px] md:w-[800px] h-auto sm:h-[400px] p-6 flex items-center justify-center"
+         style={{
+          backgroundImage: `url('/bg.svg')`,
+          background:'cover', 
+          backgroundSize:'50%',
+          backgroundRepeat: 'no-repeat',
+        }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             {/* Student Image */}
-            <img
-              src={currentFeedback.image}
-              alt={currentFeedback.name}
-              className="w-16 sm:w-20 h-16 sm:h-20 rounded-full object-cover"
-            />
-            {/* Student Name */}
-            <div>
-              <h3 className="font-semibold text-xl sm:text-2xl text-gray-800">
+            <div className="flex-shrink-0">
+              <img
+                src={currentFeedback.image}
+                alt={currentFeedback.name}
+                className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] rounded-full object-cover"
+              />
+            </div>
+
+            {/* Title and Description */}
+            <div className="text-center sm:text-left">
+              <h3 className="font-semibold text-xl sm:text-2xl text-gray-800 mb-4">
                 {currentFeedback.name}
               </h3>
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                {currentFeedback.description}
+              </p>
             </div>
           </div>
-          {/* Student Description */}
-          <p className="text-gray-600 mt-4 text-base sm:text-lg leading-relaxed">
-            {currentFeedback.description}
-          </p>
         </div>
 
-        {/* Right Button */}
-        <button
-          onClick={handleNext}
-          className="absolute right-2 sm:right-4 bg-gray-200 hover:bg-gray-300 text-black p-2 sm:p-3 rounded-full shadow-md transition-all duration-300"
-        >
-          &gt;
-        </button>
+        {/* Buttons Positioned Outside */}
+        <div className="w-full flex justify-between items-center mt-6">
+          {/* Left Button */}
+          <button
+            onClick={handlePrev}
+            className="bg-gray-200 hover:bg-gray-300 text-black p-3 sm:p-4 rounded-full shadow-md transition-all duration-300"
+          >
+            &lt;
+          </button>
+
+          {/* Right Button */}
+          <button
+            onClick={handleNext}
+            className="bg-gray-200 hover:bg-gray-300 text-black p-3 sm:p-4 rounded-full shadow-md transition-all duration-300"
+          >
+            &gt;
+          </button>
+        </div>
       </div>
     </div>
   );

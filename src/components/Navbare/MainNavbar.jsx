@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // Track menu open state
-  const [isScrolled, setIsScrolled] = useState(false); // Track scroll position
-  const navigate = useNavigate(); // Initialize the navigate function
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   let dropdownTimeout;
 
@@ -18,7 +18,7 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     dropdownTimeout = setTimeout(() => {
       setDropdownOpen(false);
-    }, 300); // Delay of 300ms
+    }, 300);
   };
 
   useEffect(() => {
@@ -31,18 +31,26 @@ const Navbar = () => {
   }, []);
 
   const handleClassCodingClick = () => {
-    navigate("/classcodingpages"); // Programmatically navigate to the class coding page
+    navigate("/classcodingpages");
   };
 
   return (
     <nav
-      className={`px-4 md:px-8 py-3 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`px-4 md:px-8 py-3 flex items-center justify-between sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       {/* Logo */}
-      <div className="flex items-center space-x-4">
-        <img src={logo} alt="Logo" className="h-16 md:h-20" />
+      <div
+        className={`flex items-center transition-transform duration-300 ${
+          isScrolled ? "translate-y-[-5px]" : "translate-y-0"
+        }`}
+      >
+        <img
+          src={logo}
+          alt="Logo"
+          className="h-12 md:h-20  transition-all duration-300"
+        />
       </div>
 
       {/* Hamburger Icon */}
@@ -57,7 +65,6 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-8">
-        {/* Dropdown */}
         <div
           className="relative group"
           onMouseEnter={handleMouseEnter}
@@ -86,7 +93,6 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-
         <a
           href="#our-courses"
           className="text-gray-700 text-lg font-medium hover:text-[#FF8C24]"
@@ -100,7 +106,7 @@ const Navbar = () => {
           Placement
         </a>
         <a
-          onClick={handleClassCodingClick} // Use onClick to navigate
+          onClick={handleClassCodingClick}
           className="text-[#FF8C24] text-lg font-medium cursor-pointer"
         >
           Class Coding

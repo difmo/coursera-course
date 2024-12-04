@@ -13,8 +13,8 @@ const cards = [
     description:
       "4/37 Vibhav Khand Gomti Nagar, Lucknow, Uttar Pradesh, 226010",
     imgSrc:
-      "https://odysseymt.com/wp-content/uploads/2023/07/Flag_of_India.svg.webp",
-    subtitle: "India",
+      "https://tse4.mm.bing.net/th?id=OIP.onx9IraiCbuEyC7NWLKvawHaE8&pid=Api&P=0&h=180",
+    subtitle: "Pakistan",
     mobno: "+91 9818174285",
   },
   {
@@ -22,8 +22,8 @@ const cards = [
     description:
       "4/37 Vibhav Khand Gomti Nagar, Lucknow, Uttar Pradesh, 226010",
     imgSrc:
-      "https://odysseymt.com/wp-content/uploads/2023/07/Flag_of_India.svg.webp",
-    subtitle: "India",
+      "https://s.yimg.com/fz/api/res/1.2/HFald34SD39EVpsDZBXoBQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0yMjA7cT04MDt3PTQ0MA--/https://s.yimg.com/zb/imgv1/c4611c00-d0f1-3c89-bcc7-b42f18c93195/t_500x300",
+    subtitle: "Australia",
     mobno: "+91 9818174285",
   },
 ];
@@ -41,20 +41,20 @@ function ContactUs() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="p-4 rounded-lg shadow-lg bg-white flex flex-col space-y-4"
+              className="p-4 rounded-lg border-2 bg-white flex flex-col space-y-4"
             >
               <div className="flex items-center space-x-4">
                 <img
                   src={card.imgSrc}
                   alt={card.title}
-                  className="w-24 h-24 object-cover rounded-md"
+                  className="w-24 h-24 object-contain rounded-md"
                 />
-                <h3 className="text-2xl md:text-4xl font-semibold">
+                <h3 className="text-xl md:text-4xl font-semibold">
                   {card.subtitle}
                 </h3>
               </div>
               <h3 className="text-lg sm:text-xl font-bold">{card.title}</h3>
-              <p className="text-gray-600 text-2xl ">{card.description}</p>
+              <p className="text-gray-600 text-lg ">{card.description}</p>
               <a
                 href={`tel:${card.mobno}`}
                 className="text-blue-600 text-xl  hover:underline"

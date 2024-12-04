@@ -307,7 +307,13 @@ const Classcodingpages = () => {
 
   return (
     
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#008ECC]"
+    style={{
+      backgroundImage: `url('/bg.svg')`,
+      background:'cover', 
+      backgroundSize:'100%',
+      // backgroundRepeat: 'no-repeat',
+    }}>
   
       <div className="flex flex-col gap-6 p-4 max-w-3xl w-full">
         {courses.map((course) => (

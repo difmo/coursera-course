@@ -50,7 +50,7 @@ const OurOfferings = () => {
           transition={{ duration: 1 }}
           className="text-2xl sm:text-3xl font-bold text-center mb-8 text-indigo-600"
         >
-          Our Offerings
+          Letest Courses
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {offerings.map((offering) => (
