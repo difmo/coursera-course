@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // Track menu open state
   const [isScrolled, setIsScrolled] = useState(false); // Track scroll position
+  const navigate = useNavigate(); // Initialize the navigate function
 
   let dropdownTimeout;
 
@@ -27,6 +29,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleClassCodingClick = () => {
+    navigate("/classcodingpages"); // Programmatically navigate to the class coding page
+  };
 
   return (
     <nav
@@ -94,10 +100,10 @@ const Navbar = () => {
           Placement
         </a>
         <a
-          href="#australian-coding"
-          className="text-[#FF8C24] text-lg font-medium"
+          onClick={handleClassCodingClick} // Use onClick to navigate
+          className="text-[#FF8C24] text-lg font-medium cursor-pointer"
         >
-          Australian Coding
+          Class Coding
         </a>
       </div>
 
