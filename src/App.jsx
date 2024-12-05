@@ -10,6 +10,7 @@ import BigData from "./components/Blogs/BlogsPage/BigData";
 import CloudComputing from "./components/Blogs/BlogsPage/CloudComputing";
 import MachineLearning from "./components/Blogs/BlogsPage/MachineLearning";
 import Cybersecurity from "./components/Blogs/BlogsPage/Cybersecurity";
+import CoursesPopular from "./components/Our Popular Courses/CoursesPopular";
 function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
           <Route path="CloudComputing" element={<CloudComputing />} />
           <Route path="MachineLearning" element={<MachineLearning />} />
           <Route path="Cybersecurity" element={<Cybersecurity />} />
+          <Route path="CoursesPopular" element={<CoursesPopular/>}/>
         </Route>
       </Routes>
     </Router>

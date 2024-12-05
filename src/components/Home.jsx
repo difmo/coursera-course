@@ -6,7 +6,6 @@ import Feedback from "./Feedback/Feedback";
 import CoursesPopular from "./Our Popular Courses/CoursesPopular";
 import ContactUs from "./Blogs/Contact/ContactUs";
 import OurBlogs from "./Blogs/OurBlogs";
-import { Link } from "react-router-dom";
 // import ClassroomTrain from "./MedicalCoding/ClassroomTrain";
 
 function Home() {
@@ -16,7 +15,7 @@ function Home() {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
           <div
-            className="flex flex-col mt-10 md:mt-1 justify-center items-start space-y-6 h-full"
+            className="flex flex-col justify-center items-start space-y-6 h-full"
             style={{
               backgroundImage: `url('/bg.svg')`,
               background: "cover",
@@ -56,8 +55,8 @@ function Home() {
             </form>
 
             <div className="flex items-center space-x-4">
-              <p className="text-xl text-white">
-                Over <span className="text-[#ff8c24]">150,000 students</span>{" "}
+              <p className="text-xl text-white font-bold">
+                Over <span className="text-[#ff8c24] ">150,000 students</span>{" "}
                 all over the world.
               </p>
             </div>
@@ -71,18 +70,13 @@ function Home() {
               className="w-full max-w-[500px] sm:max-w-[400px] md:max-w-[500px] h-auto mx-auto"
             />
 
-            <div className="absolute -bottom-10 sm:bottom-[-20px] md:bottom-[-50px] w-full sm:w-72 right-0 sm:right-4 bg-white p-4 shadow-lg rounded-lg text-center">
+            <div className="absolute -bottom-4 sm:bottom-[-20px] md:bottom-[-50px] w-full sm:w-72 right-0 sm:right-4 bg-white p-4 shadow-lg rounded-lg text-center">
               <h4 className="text-lg sm:text-xl font-semibold text-gray-800">
                 Join Job Integrated Program now & ensure placement
               </h4>
-              <div className="flex justify-center  items-center">
-                <Link
-                  to="#"
-                  className="bg-[#ff8c24] text-white p-2 w-40 rounded-xl  flex justify-center  items-center hover:underline  mt-2"
-                >
-                  Learn More
-                </Link>
-              </div>
+              <a href="#" className="text-[#ff8c24] hover:underline block mt-2">
+                Learn More
+              </a>
             </div>
           </div>
         </div>

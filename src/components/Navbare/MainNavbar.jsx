@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
@@ -79,73 +79,73 @@ const Navbar = () => {
               dropdownOpen ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
-            <a
-              href="Onlinetraining"
+            <Link
+              to="Onlinetraining"
               className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
             >
               Online Training
-            </a>
-            <a
-              href="ClassroomTrain"
+            </Link>
+            <Link
+              to="ClassroomTrain"
               className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
             >
               Classroom Training
-            </a>
+            </Link>
           </div>
         </div>
-        <a
-          href="#our-courses"
+        <Link
+          to="CoursesPopular"
           className="text-gray-700 text-lg font-medium hover:text-[#FF8C24]"
         >
           Our Courses
-        </a>
-        <a
-          href="#placement"
+        </Link>
+        <Link
+          to="#placement"
           className="text-gray-700 text-lg font-medium hover:text-[#FF8C24]"
         >
           Placement
-        </a>
-        <a
+        </Link>
+        <Link
           onClick={handleClassCodingClick}
           className="text-[#FF8C24] text-lg font-medium cursor-pointer"
         >
           Class Coding
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="absolute top-full  left-0 w-full bg-white shadow-lg md:hidden">
-          <a
-            href="#online-training"
+          <Link
+            to="#online-training"
             className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
           >
             Online Training
-          </a>
-          <a
-            href="#classroom-training"
+          </Link>
+          <Link
+            to="#classroom-training"
             className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
           >
             Classroom Training
-          </a>
-          <a
-            href="#our-courses"
+          </Link>
+          <Link
+            to="#our-courses"
             className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
           >
             Our Courses
-          </a>
-          <a
-            href="#placement"
+          </Link>
+          <Link
+            to="#placement"
             className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
           >
             Placement
-          </a>
-          <a
-            href="#australian-coding"
+          </Link>
+          <Link
+            to="#australian-coding"
             className="block px-6 py-3 text-[#FF8C24] font-medium text-lg"
           >
             Australian Coding
-          </a>
+          </Link>
           <div className="px-6 py-3">
             <button className="bg-[#FF8C24] w-full text-white py-3 text-lg rounded-md hover:bg-[#FF7A19]">
               Enroll Me
