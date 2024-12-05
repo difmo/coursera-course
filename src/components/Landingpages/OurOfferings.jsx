@@ -4,39 +4,39 @@ import { motion } from "framer-motion";
 const offerings = [
   {
     id: "1",
-    title: "MedicalCoding",
+    title: "Artificial Intelligence",
     image:
-      "https://odysseymt.com/wp-content/uploads/2023/07/1-Medical-Coding-e1689761564720.jpg",
-    points: ["ICD-10 CM", "CPT-4", "HCPCS codes"],
+      "https://img.freepik.com/free-photo/ai-nuclear-energy-future-innovation-disruptive-technology_53876-129784.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted  ",
+    points: ["Machine Learning (ML)", "Natural Language Processing", "Computer Vision"],
     button: "Read more",
-    link: "https://example.com/MedicalCoding", // External link for this offering
+    link: "https://coursya.com/product/coursera/ai-product-management-specialization/?utm_source=LinkedIn%20&utm_campaign=sr", // External link for this offering
   },
   {
     id: "2",
-    title: "Australian Coding",
+    title: "Data Science",
     image:
-      "https://odysseymt.com/wp-content/uploads/2023/07/1-Medical-Coding-e1689761564720.jpg",
-    points: ["ICD-10 AM", "ACHI", "ACS"],
+      "https://img.freepik.com/free-vector/illustration-social-media-concept_53876-18141.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted",
+    points: ["Data Analysis and Visualization", "Statistical Modeling", "Machine Learning Techniques"],
     button: "Read more",
-    link: "https://example.com/AustralianCoding", // External link for this offering
+    link: "https://cpe.iiitb.ac.in/courses/epgp-data-science", // External link for this offering
   },
   {
     id: "3",
-    title: "Medical Billing",
+    title: "Big Data",
     image:
-      "https://odysseymt.com/wp-content/uploads/2023/07/Medical-Billing-Company-Names-e1689762580567.webp",
-    points: ["Charge Posting", "Payment Posting", "Account Receivable"],
+      "https://img.freepik.com/free-vector/abstract-particles-dark-background_1217-1472.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted ",
+    points: ["Distributed Computing", "Data Storage and Management", "Real-time Data Processing"],
     button: "Read more",
-    link: "https://example.com/MedicalBilling", // External link for this offering
+    link: "https://coursya.com/product/coursera/google-project-management-2/?utm_source=LinkedIn%20&utm_campaign=sr", // External link for this offering
   },
   {
     id: "4",
-    title: "Medical Calling",
+    title: "Cloud Computing",
     image:
-      "https://odysseymt.com/wp-content/uploads/2023/07/maxresdefault-1-1-e1689762204387.jpg",
-    points: ["Charge Posting", "Payment Posting", "Account Receivable"],
+      "https://img.freepik.com/free-vector/people-use-smart-technology-life-business_81522-3214.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted",
+    points: ["AWS", "Docker", "Cloud Security and Compliance "],
     button: "Read more",
-    link: "https://example.com/MedicalCalling", // External link for this offering
+    link: "https://cloud.google.com/learn/training", // External link for this offering
   },
 ];
 
@@ -79,7 +79,7 @@ const OurOfferings = () => {
                   href={offering.link} // Use the link directly
                   target="_blank"
                   rel="noopener noreferrer" // For security and performance
-                  className="bg-indigo-600 text-white py-2 px-4 text-sm sm:text-base rounded-md hover:bg-indigo-500 transition-colors duration-300 w-full text-center block"
+                  className="bg-[#ff8c24] text-white py-2 px-4 text-sm sm:text-base rounded-md  transition-colors duration-300 w-full text-center block"
                 >
                   {offering.button}
                 </a>

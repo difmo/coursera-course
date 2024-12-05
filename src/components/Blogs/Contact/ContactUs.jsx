@@ -2,11 +2,12 @@ import React from "react";
 const cards = [
   {
     title: "Head Office",
-    description: "91 Springboard C-2, Sector-1 Noida 201310 Uttar Pradesh,",
+    description: "4/37 Vibhav Khand Gomti Nagar, Lucknow, Uttar Pradesh, 226010",
     imgSrc:
       "https://odysseymt.com/wp-content/uploads/2023/07/Flag_of_India.svg.webp",
     subtitle: "India",
-    mobno: "+91 9818174285",
+    mobno: "+91 7317001012",
+ 
   },
   {
     title: "Card 2",
@@ -14,8 +15,9 @@ const cards = [
       "4/37 Vibhav Khand Gomti Nagar, Lucknow, Uttar Pradesh, 226010",
     imgSrc:
       "https://tse4.mm.bing.net/th?id=OIP.onx9IraiCbuEyC7NWLKvawHaE8&pid=Api&P=0&h=180",
-    subtitle: "Pakistan",
-    mobno: "+91 9818174285",
+    subtitle: "India",
+    mobno: "+91 7317001012",
+    
   },
   {
     title: "Card 3",
@@ -23,8 +25,9 @@ const cards = [
       "4/37 Vibhav Khand Gomti Nagar, Lucknow, Uttar Pradesh, 226010",
     imgSrc:
       "https://s.yimg.com/fz/api/res/1.2/HFald34SD39EVpsDZBXoBQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0yMjA7cT04MDt3PTQ0MA--/https://s.yimg.com/zb/imgv1/c4611c00-d0f1-3c89-bcc7-b42f18c93195/t_500x300",
-    subtitle: "Australia",
-    mobno: "+91 9818174285",
+    subtitle: "India",
+    mobno: "+91 7317001012",
+
   },
 ];
 function ContactUs() {

@@ -1,41 +1,52 @@
 import React from "react";
-import Slider from "react-slick"; // Import Slider from react-slick
-import "slick-carousel/slick/slick.css"; // Correct import for slick-carousel CSS
-import "slick-carousel/slick/slick-theme.css"; // Correct import for slick-carousel theme CSS
-import blog from "../../assets/ImageSec/gallaryimg2.jpg";
-import { Player } from "video-react";
-import "video-react/dist/video-react.css";
+import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const OurBlogs = () => {
+  const navigate = useNavigate();
+
   const cards = [
     {
-      title: "Card 1",
-      description: "This is the description for card 1.",
-      imgSrc: blog,
-      link: "#", // Add a link or action here
+      title: "Revolutionizing Healthcare with AI",
+      description:
+        "Discover how artificial intelligence is transforming diagnostics, patient care, and personalized medicine.",
+      image:
+        "https://img.freepik.com/free-photo/young-female-doctor-wearing-vr-glasses-holding-her-hand-up-high-quality-photo_144627-75383.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted",
+      link: "/DataScienceBlog",
     },
     {
-      title: "Card 2",
-      description: "This is the description for card 2.",
-      imgSrc: blog,
-      link: "#", // Add a link or action here
+      title: "Big Data",
+      description:
+        "Explore the role of big data in uncovering insights, optimizing operations, and driving innovation across industries.",
+      image:
+        "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169850.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted",
+      link: "/BigData",
     },
     {
-      title: "Card 3",
-      description: "This is the description for card 3.",
-      imgSrc: blog,
-      link: "#", // Add a link or action here
+      title: "Cloud Computing",
+      description:
+        "Learn how cloud technology enables scalability, flexibility, and cost-efficiency for businesses in a connected world.",
+      image:
+        "https://img.freepik.com/free-vector/cloud-computing-infographic_23-2147488748.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted",
+      link: "/CloudComputing",
     },
     {
-      title: "Card 4",
-      description: "This is the description for card 4.",
-      imgSrc: blog,
-      link: "#", // Add a link or action here
+      title: "The Rise of Machine Learning",
+      description:
+        "Understand the impact of machine learning in automating processes and enhancing decision-making.",
+      image:
+        "https://img.freepik.com/free-photo/robot-assembly-line_1048-2674.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted",
+      link: "/MachineLearning",
     },
     {
-      title: "Card 5",
-      description: "This is the description for card 5.",
-      imgSrc: blog,
-      link: "#", // Add a link or action here
+      title: "Cybersecurity in the Digital Age",
+      description:
+        "Delve into advanced techniques and tools safeguarding data and systems against modern cyber threats.",
+      image:
+        "https://img.freepik.com/free-photo/medium-shot-man-with-hoodie-holding-laptop_23-2149192118.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted",
+      link: "/Cybersecurity",
     },
   ];
 
@@ -48,55 +59,59 @@ const OurBlogs = () => {
     arrows: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // For tablets
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 768, // For mobile devices
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
   };
 
   return (
-    <div className="bg-gray-50 py-6">
+    <div className="bg-gray-50 py-8">
       {/* Header Section */}
-      <header className="font-serif py-4 px-8">
-        <h1 className="text-4xl font-bold text-gray-800 flex justify-center">
-          Our Blogs
-        </h1>
+      <header className="font-serif py-4 text-center">
+        <h1 className="text-4xl font-bold text-gray-800">Our Blogs</h1>
+        <p className="text-gray-600 mt-2">Insights, trends, and innovations</p>
       </header>
 
-      <main className="p-8">
+      <main className="px-4">
         <section>
-          <div className="relative">
-            <Slider {...settings}>
-              {cards.map((card, index) => (
-                <div
-                  key={index}
-                  className="p-4 rounded-lg shadow-lg bg-white flex flex-col items-center space-y-4"
-                >
+          <Slider {...settings}>
+            {cards.map((card, index) => (
+              <div key={index} className="p-4">
+                <div className="rounded-lg shadow-lg bg-white overflow-hidden">
                   <img
-                    src={card.imgSrc}
+                    src={card.image}
                     alt={card.title}
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-48 object-cover"
                   />
-                  <h3 className="text-xl font-semibold">{card.title}</h3>
-                  <p className="text-gray-600">{card.description}</p>
-                  <p
-                    href={card.link} // You can change this link or provide an action like a modal
-                    className=" text-[#ff8c24] py-2 px-4 rounded-mdtext-center"
-                  >
-                    Read More
-                  </p>
+                  <div className="p-4 flex flex-col items-center text-center">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+                      {card.description}
+                    </p>
+                    <button
+                      onClick={() => navigate(card.link)}
+                      className="mt-4 py-2 px-6 rounded-md border border-[#ff8c24] text-[#ff8c24] hover:bg-[#ff8c24] hover:text-white transition duration-300"
+                    >
+                      Read More
+                    </button>
+                  </div>
                 </div>
-              ))}
-            </Slider>
-          </div>
+              </div>
+            ))}
+          </Slider>
         </section>
       </main>
     </div>

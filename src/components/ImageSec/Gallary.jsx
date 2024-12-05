@@ -8,12 +8,12 @@ import img6 from "../../assets/ImageSec/gallaryimg6.jpg";
 
 const Gallary = () => {
   const images = [
-    { src: img1, alt: "Image 1" },
-    { src: img2, alt: "Image 2" },
-    { src: img3, alt: "Image 3" },
-    { src: img4, alt: "Image 4" },
-    { src: img5, alt: "Image 5" },
-    { src: img6, alt: "Image 6" },
+    { src: img1, alt: "Beautiful Landscape 1" },
+    { src: img2, alt: "Beautiful Landscape 2" },
+    { src: img3, alt: "Beautiful Landscape 3" },
+    { src: img4, alt: "Beautiful Landscape 4" },
+    { src: img5, alt: "Beautiful Landscape 5" },
+    { src: img6, alt: "Beautiful Landscape 6" },
   ];
 
   return (
@@ -21,24 +21,27 @@ const Gallary = () => {
       className="min-h-screen py-12 bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url('/bg.svg')`,
-        background:'cover', 
-        backgroundSize:'40%,50%'
+        backgroundSize: "cover",
       }}
     >
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 text-indigo-600">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-indigo-600">
         Image Gallery
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 gap-4 px-4 sm:px-6 lg:px-8 sm:grid-cols-2 md:grid-cols-3">
         {images.map((image, index) => (
           <div key={index} className="relative group">
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-md"
-            />
-            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-2xl sm:text-3xl lg:text-4xl">
-                +
+            {/* Maintain aspect ratio */}
+            <div className="w-full aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover rounded-md shadow-md"
+              />
+            </div>
+            {/* Overlay */}
+            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
+              <span className="text-white text-sm sm:text-lg md:text-xl font-bold">
+                View
               </span>
             </div>
           </div>

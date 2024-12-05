@@ -7,7 +7,13 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer className="pt-4 bg-gray-600 text-white">
+    <footer className="pt-4 bg-gray-600 text-white"
+    style={{
+      backgroundImage: `url('/footerbg.svg')`,
+      background:'cover', 
+      backgroundSize:'20%',
+      backgroundRepeat: 'no-repeat',
+    }}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
