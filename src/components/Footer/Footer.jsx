@@ -84,7 +84,7 @@ const Footer = () => {
                 </li>
                 <li
                   className="duration-200 cursor-pointer hover:text-secondary"
-                  onClick={() => navigate("/contactus")}
+                  onClick={() => navigate("/ContactUs")}
                 >
                   Contact
                 </li>

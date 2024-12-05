@@ -12,9 +12,12 @@ import MachineLearning from "./components/Blogs/BlogsPage/MachineLearning";
 import Cybersecurity from "./components/Blogs/BlogsPage/Cybersecurity";
 import CoursesPopular from "./components/Our Popular Courses/CoursesPopular";
 import AboutPage from "./components/About/AboutPage";
+import ScrollToTop from "./components/Scrolltop";
+import ContactUs from "./components/Blogs/Contact/ContactUs";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Layout is the parent route */}
         <Route path="/" element={<Layout />}>
@@ -28,7 +31,9 @@ function App() {
           <Route path="MachineLearning" element={<MachineLearning />} />
           <Route path="Cybersecurity" element={<Cybersecurity />} />
           <Route path="CoursesPopular" element={<CoursesPopular />} />
-          <Route path="AboutPage" element={<AboutPage/>}/>
+          <Route path="ContactUs" element={<ContactUs />} />
+          <Route path="AboutPage" element={<AboutPage />} />
+          
         </Route>
       </Routes>
     </Router>

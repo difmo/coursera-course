@@ -106,7 +106,7 @@ const Navbar = () => {
           Placement
         </Link>
         <Link
-          onClick={handleClassCodingClick}
+          to="Classcodingpages"
           className="text-[#FF8C24] text-lg font-medium cursor-pointer"
         >
           Class Coding
@@ -140,12 +140,12 @@ const Navbar = () => {
           >
             Placement
           </Link>
-          <Link
+          {/* <Link
             to="#australian-coding"
             className="block px-6 py-3 text-[#FF8C24] font-medium text-lg"
           >
             Australian Coding
-          </Link>
+          </Link> */}
           <div className="px-6 py-3">
             <button className="bg-[#FF8C24] w-full text-white py-3 text-lg rounded-md hover:bg-[#FF7A19]">
               Enroll Me
