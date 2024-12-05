@@ -13,6 +13,7 @@ const Footer = () => {
       background:'cover', 
       backgroundSize:'20%',
       backgroundRepeat: 'no-repeat',
+      
     }}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
