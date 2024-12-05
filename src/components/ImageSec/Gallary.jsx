@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"; // Import motion
 import img1 from "../../assets/ImageSec/gallaryimg1.jpg";
 import img2 from "../../assets/ImageSec/gallaryimg2.jpg";
 import img3 from "../../assets/ImageSec/gallaryimg3.jpg";
@@ -17,25 +18,29 @@ const Gallary = () => {
   ];
 
   return (
-    <div
-      className="min-h-screen py-12 bg-cover bg-center bg-no-repeat"
-      // style={{
-      //   backgroundImage: `url('/bg.svg')`,
-      //   backgroundSize: "cover",
-      // }}
-    >
+    <div className="min-h-screen py-12 bg-cover bg-center bg-no-repeat">
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-gray-700">
         Image Gallery
       </h2>
-      <div className="grid grid-cols-1 gap-4 px-4 sm:px-6 lg:px-8 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 sm:px-6 lg:px-8">
         {images.map((image, index) => (
-          <div key={index} className="relative group">
-            {/* Maintain aspect ratio */}
-            <div className="w-full aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3">
-              <img
+          <motion.div
+            key={index}
+            className="relative group"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 100, damping: 25 }}
+          >
+            {/* Maintain aspect ratio and fill the container */}
+            <div className="w-full h-64 sm:h-72 md:h-80">
+              <motion.img
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover rounded-md shadow-md"
+                whileHover={{
+                  scale: 1.05,
+                  transition: { type: "spring", stiffness: 200, damping: 25 },
+                }}
               />
             </div>
             {/* Overlay */}
@@ -44,7 +49,7 @@ const Gallary = () => {
                 View
               </span>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
