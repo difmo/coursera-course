@@ -74,7 +74,7 @@ const CoursesPopular = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen flex flex-col">
+    <div className="bg-gray-50  flex flex-col">
       {/* Header Section */}
       <header className="font-serif py-6 px-4 sm:px-8">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 text-center">
@@ -83,14 +83,14 @@ const CoursesPopular = () => {
       </header>
 
       {/* Slider Section */}
-      <main className="flex-grow p-4 ">
+      <main className="flex-grow p-8 ">
         <section>
           <div className="relative">
             <Slider {...settings}>
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className="p-4 rounded-lg shadow-lg bg-white flex flex-col items-center space-y-4 h-full w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1rem)] mx-auto"
+                  className="p-4 rounded-lg shadow-lg bg-white flex flex-col items-center space-y-4 h-full w-full  mx-auto"
                 >
                   <img
                     src={card.imgSrc}
