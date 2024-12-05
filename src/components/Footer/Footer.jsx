@@ -7,14 +7,15 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer className="pt-4 bg-gray-600 text-white"
-    style={{
-      backgroundImage: `url('/footerbg.svg')`,
-      background:'cover', 
-      backgroundSize:'20%',
-      backgroundRepeat: 'no-repeat',
-      
-    }}>
+    <footer
+      className="pt-4 bg-gray-600 text-white"
+      style={{
+        backgroundImage: `url('/footerbg.svg')`,
+        background: "cover",
+        backgroundSize: "20%",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -71,13 +72,13 @@ const Footer = () => {
                 </li>
                 <li
                   className="duration-200 cursor-pointer hover:text-secondary"
-                  onClick={() => navigate("/courses")}
+                  onClick={() => navigate("/CoursesPopular")}
                 >
                   Our Courses
                 </li>
                 <li
                   className="duration-200 cursor-pointer hover:text-secondary"
-                  onClick={() => navigate("/about")}
+                  onClick={() => navigate("/AboutPage")}
                 >
                   About
                 </li>

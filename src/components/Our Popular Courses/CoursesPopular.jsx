@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 const CoursesPopular = () => {
   const cards = [
@@ -103,14 +104,16 @@ const CoursesPopular = () => {
                   <p className="text-gray-600 text-sm sm:text-base py-4 px-4 text-center line-clamp-3">
                     {card.description}
                   </p>
-                  <a
-                    href={card.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="py-2 px-6 rounded-md text-sm sm:text-base bg-[#ff8c24] text-white hover:bg-[#e97d1f] transition-all duration-300"
-                  >
-                    Read More
-                  </a>
+                  <div className="py-4 flex justify-center">
+                    <Link
+                      to={card.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-2 px-6 rounded-md text-sm sm:text-base bg-[#ff8c24] text-white hover:bg-[#e97d1f] transition-all duration-300"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               ))}
             </Slider>
