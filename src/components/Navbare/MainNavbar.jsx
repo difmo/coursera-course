@@ -43,7 +43,7 @@ const Navbar = () => {
       {/* Logo */}
       <div
         className={`flex items-center transition-transform duration-300 ${
-          isScrolled ? "translate-y-[-5px]" : "translate-y-0"
+          isScrolled ? "" : "translate-y-0"
         }`}
       >
         <img
