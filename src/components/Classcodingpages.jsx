@@ -340,7 +340,7 @@ const Classcodingpages = () => {
                   to={course.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white bg-blue-500  border bg hover:underline font-medium p-4 rounded-xl hover:shadow "
+                  className="text-white bg-blue-500  border bg  font-medium p-4 rounded-xl hover:shadow "
                 >
                   Enroll Now
                 </Link>
