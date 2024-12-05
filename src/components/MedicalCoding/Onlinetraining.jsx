@@ -113,9 +113,9 @@ function Onlinetraining() {
   } = online[0];
 
   return (
-    <div className="px-6 py-8 mt-12 bg-gray-100">
+    <div className="px-6 py-8 mt-12 bg-gray-50">
       {/* Online Training Section */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-8 ">
         <h1 className="text-3xl md:text-5xl font-bold py-36 text-gray-800">
           {onlineTitle}
         </h1>
@@ -163,13 +163,19 @@ function Onlinetraining() {
                   key={index}
                   className="p-4 rounded-lg shadow-lg bg-white flex flex-col items-center space-y-4 space-x-5"
                 >
-                  <img
-                    src={card.imgSrc}
-                    alt={card.title}
-                    className="w-full h-full object-cover rounded-full"
-                  />
+                  {/* Image Container */}
+                  <div className="flex justify-center items-center w-32 h-32 md:w-40 md:h-40">
+                    <img
+                      src={card.imgSrc}
+                      alt={card.title}
+                      className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+
                   <h3 className="text-xl font-semibold">{card.title}</h3>
-                  <p className="text-gray-600">{card.description}</p>
+                  <p className="text-gray-600 text-center">
+                    {card.description}
+                  </p>
                   <a
                     href={card.link} // You can change this link or provide an action like a modal
                     className="text-[#ff8c24] py-2 px-4 rounded-md text-center"

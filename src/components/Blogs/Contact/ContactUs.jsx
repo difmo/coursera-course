@@ -2,7 +2,7 @@ import React from "react";
 
 const ContentUs = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center py-12 px-6 sm:px-8">
+    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center py-4 px-6 sm:px-8">
       <div className="text-center">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
           Flexible learning options that fit your life

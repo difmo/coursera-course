@@ -129,23 +129,23 @@ const Navbar = () => {
             Classroom Training
           </Link>
           <Link
-            to="#our-courses"
+            to="CoursesPopular"
             className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
           >
             Our Courses
           </Link>
           <Link
-            to="#placement"
+            to=""
             className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
           >
             Placement
           </Link>
-          {/* <Link
-            to="#australian-coding"
+          <Link
+            to="Classcodingpages"
             className="block px-6 py-3 text-[#FF8C24] font-medium text-lg"
           >
-            Australian Coding
-          </Link> */}
+            Classcoding Coding
+          </Link>
           <div className="px-6 py-3">
             <button className="bg-[#FF8C24] w-full text-white py-3 text-lg rounded-md hover:bg-[#FF7A19]">
               Enroll Me

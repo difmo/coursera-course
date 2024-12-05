@@ -171,8 +171,9 @@ const Footer = () => {
       </motion.div>
 
       <hr className="bg-gray-200 h-[2px] mt-5 w-full" />
-      <div className="text-gray-400 items-center justify-center flex py-3 text-xs sm:text-sm">
-        © 2024 Coursera Course. All Rights Reserved.
+
+      <div className="flex justify-center  py-2">
+        <p>© 2024 ClassCourse. All Rights Reserved.</p>
       </div>
     </footer>
   );
