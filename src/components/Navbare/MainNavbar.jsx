@@ -144,7 +144,7 @@ const Navbar = () => {
             href="#australian-coding"
             className="block px-6 py-3 text-[#FF8C24] font-medium text-lg"
           >
-            Australian Coding
+            Class Coding
           </a>
           <div className="px-6 py-3">
             <button className="bg-[#FF8C24] w-full text-white py-3 text-lg rounded-md hover:bg-[#FF7A19]">
