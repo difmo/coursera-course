@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import searchIcon1 from "../../assets/button/lessthan.png";
+import searchIcon2 from "../../assets/button/greaterthan.png";
 const Feedback = () => {
   const feedbackData = [
     {
@@ -44,7 +45,7 @@ const Feedback = () => {
   return (
     <div className="my-16 px-4 sm:px-8 relative ">
       {/* Headline */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-[#FF8C24] mb-8 ">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-gray-700 mb-8 ">
         What Students Are Saying About Odyssey Informatics
       </h2>
 
@@ -69,10 +70,10 @@ const Feedback = () => {
 
             {/* Title and Description */}
             <div className="text-center sm:text-left">
-              <h3 className="font-semibold text-xl sm:text-2xl text-gray-800 mb-4">
+              <h3 className="font-semibold text-xl sm:text-2xl text-white mb-4">
                 {currentFeedback.name}
               </h3>
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+              <p className="text-white text-base sm:text-lg leading-relaxed">
                 {currentFeedback.description}
               </p>
             </div>
@@ -83,18 +84,27 @@ const Feedback = () => {
         <div className="w-full flex justify-between items-center mt-6">
           {/* Left Button */}
           <button
-            onClick={handlePrev}
-            className="bg-gray-200 hover:bg-gray-300 text-black p-3 sm:p-4 rounded-full shadow-md transition-all duration-300"
-          >
-            &lt;
-          </button>
+  onClick={handlePrev}
+  className="bg-gray-200 hover:bg-gray-300 text-black w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-md transition-all duration-300 flex items-center justify-center"
+>
+  <img
+    src={searchIcon1}
+    alt="Search Icon"
+    className="w-1/2 h-1/2 object-contain"
+  />
+</button>
+
 
           {/* Right Button */}
           <button
             onClick={handleNext}
-            className="bg-gray-200 hover:bg-gray-300 text-black p-3 sm:p-4 rounded-full shadow-md transition-all duration-300"
+            className="bg-gray-200 hover:bg-gray-300 text-black w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-md transition-all duration-300 flex items-center justify-center"
           >
-            &gt;
+            <img
+        src={searchIcon2}
+        alt="Search Icon"
+        className="w-1/2 h-1/2 object-contain"
+      /> 
           </button>
         </div>
       </div>
