@@ -14,13 +14,15 @@ function Home() {
       <div className="bg-[#008ECC]  px-4 md:px-20 h-auto flex items-center ">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
-          <div className="flex flex-col justify-center items-start space-y-6"
-          style={{
-            backgroundImage: `url('/bg.svg')`,
-            background:'cover', 
-            backgroundSize:'100%',
-            backgroundRepeat: 'no-repeat',
-          }}>
+          <div
+            className="flex flex-col justify-center items-start space-y-6 h-full"
+            style={{
+              backgroundImage: `url('/bg.svg')`,
+              background: "cover",
+              backgroundSize: "100%",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
               Join Medical Coding, a{" "}
               <span className="text-[#ff8c24]">high-growth</span> career
@@ -68,7 +70,7 @@ function Home() {
               className="w-full max-w-[500px] sm:max-w-[400px] md:max-w-[500px] h-auto mx-auto"
             />
 
-            <div className="absolute bottom-4 sm:bottom-[-20px] md:bottom-[-50px] w-full sm:w-72 right-0 sm:right-4 bg-white p-4 shadow-lg rounded-lg text-center">
+            <div className="absolute -bottom-4 sm:bottom-[-20px] md:bottom-[-50px] w-full sm:w-72 right-0 sm:right-4 bg-white p-4 shadow-lg rounded-lg text-center">
               <h4 className="text-lg sm:text-xl font-semibold text-gray-800">
                 Join Job Integrated Program now & ensure placement
               </h4>
@@ -86,7 +88,6 @@ function Home() {
       <Feedback />
       <ContactUs />
       <OurBlogs />
-      {/* <ClassroomTrain /> */}
     </>
   );
 }

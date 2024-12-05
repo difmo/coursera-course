@@ -52,24 +52,33 @@ const OurBlogs = () => {
 
   const settings = {
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 500,
-    dots: true,
-    arrows: true,
+    slidesToShow: 3, // Default: 3 slides on larger screens
+    slidesToScroll: 1, // Scroll one slide at a time
+    speed: 500, // Transition speed
+    dots: true, // Show dots for navigation
+    arrows: false, // Default arrows hidden
     responsive: [
       {
-        breakpoint: 1024, // For tablets
+        breakpoint: 1024, // For tablet screens
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToShow: 2, // Show 2 slides
+          arrows: true, // Show arrows
         },
       },
       {
-        breakpoint: 768, // For mobile devices
+        breakpoint: 768, // For small tablets and larger mobile devices
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 1, // Show only 1 slide
+          arrows: true, // Show arrows
+          dots: false, // Hide dots to save space on small screens
+        },
+      },
+      {
+        breakpoint: 480, // For very small screens (e.g., mobile portrait)
+        settings: {
+          slidesToShow: 1, // Show 1 slide
+          arrows: false, // Hide arrows
+          dots: false, // Hide dots as well for cleaner UI
         },
       },
     ],
@@ -79,31 +88,35 @@ const OurBlogs = () => {
     <div className="bg-gray-50 py-8">
       {/* Header Section */}
       <header className="font-serif py-4 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">Our Blogs</h1>
-        <p className="text-gray-600 mt-2">Insights, trends, and innovations</p>
+        <h1 className="text-4xl font-bold text-gray-800 sm:text-3xl md:text-4xl">
+          Our Blogs
+        </h1>
+        <p className="text-gray-600 mt-2 text-lg sm:text-base">
+          Insights, trends, and innovations
+        </p>
       </header>
 
-      <main className="px-4">
+      <main className="px-4 sm:px-2">
         <section>
           <Slider {...settings}>
             {cards.map((card, index) => (
-              <div key={index} className="p-4">
+              <div key={index} className="p-4 sm:p-2">
                 <div className="rounded-lg shadow-lg bg-white overflow-hidden">
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-cover sm:h-40 md:h-48"
                   />
                   <div className="p-4 flex flex-col items-center text-center">
-                    <h3 className="text-lg font-semibold text-gray-800">
+                    <h3 className="text-lg font-semibold text-gray-800 sm:text-base">
                       {card.title}
                     </h3>
-                    <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+                    <p className="text-sm text-gray-600 mt-2 line-clamp-2 sm:text-xs">
                       {card.description}
                     </p>
                     <button
                       onClick={() => navigate(card.link)}
-                      className="mt-4 py-2 px-6 rounded-md border border-[#ff8c24] text-[#ff8c24] hover:bg-[#ff8c24] hover:text-white transition duration-300"
+                      className="mt-4 py-2 px-6 rounded-md border border-[#ff8c24] text-[#ff8c24] hover:bg-[#ff8c24] hover:text-white transition duration-300 text-sm sm:text-xs"
                     >
                       Read More
                     </button>

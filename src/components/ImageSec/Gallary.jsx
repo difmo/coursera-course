@@ -19,12 +19,12 @@ const Gallary = () => {
   return (
     <div
       className="min-h-screen py-12 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url('/bg.svg')`,
-        backgroundSize: "cover",
-      }}
+      // style={{
+      //   backgroundImage: `url('/bg.svg')`,
+      //   backgroundSize: "cover",
+      // }}
     >
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-indigo-600">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-gray-700">
         Image Gallery
       </h2>
       <div className="grid grid-cols-1 gap-4 px-4 sm:px-6 lg:px-8 sm:grid-cols-2 md:grid-cols-3">

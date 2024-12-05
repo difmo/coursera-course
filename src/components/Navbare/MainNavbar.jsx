@@ -115,7 +115,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
+        <div className="absolute top-full  left-0 w-full bg-white shadow-lg md:hidden">
           <a
             href="#online-training"
             className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
