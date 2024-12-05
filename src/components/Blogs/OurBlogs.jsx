@@ -85,7 +85,7 @@ const OurBlogs = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-8">
+    <div className="bg-gray-50 py-8 gap-11">
       {/* Header Section */}
       <header className="font-serif py-4 text-center">
         <h1 className="text-4xl font-bold text-gray-800 sm:text-3xl md:text-4xl">
@@ -100,7 +100,9 @@ const OurBlogs = () => {
         <section>
           <Slider {...settings}>
             {cards.map((card, index) => (
-              <div key={index} className="p-4 sm:p-2">
+              <div key={index} className="p-2 sm:p-2 h-96 max-w-xs mx-auto">
+                {" "}
+                {/* Added max-w-xs and mx-auto for centering */}
                 <div className="rounded-lg shadow-lg bg-white overflow-hidden">
                   <img
                     src={card.image}

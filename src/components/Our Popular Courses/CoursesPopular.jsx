@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 const CoursesPopular = () => {
   const cards = [
@@ -74,7 +75,7 @@ const CoursesPopular = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen flex flex-col">
+    <div className="bg-gray-50  flex flex-col">
       {/* Header Section */}
       <header className="font-serif py-6 px-4 sm:px-8">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 text-center">
@@ -83,14 +84,14 @@ const CoursesPopular = () => {
       </header>
 
       {/* Slider Section */}
-      <main className="flex-grow p-4 ">
+      <main className="flex-grow p-8 ">
         <section>
           <div className="relative">
             <Slider {...settings}>
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className="p-4 rounded-lg shadow-lg bg-white flex flex-col items-center space-y-4 h-full w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1rem)] mx-auto"
+                  className="p-4 rounded-lg shadow-lg bg-white flex flex-col items-center space-y-4 h-full w-full  mx-auto"
                 >
                   <img
                     src={card.imgSrc}
@@ -103,14 +104,16 @@ const CoursesPopular = () => {
                   <p className="text-gray-600 text-sm sm:text-base py-4 px-4 text-center line-clamp-3">
                     {card.description}
                   </p>
-                  <a
-                    href={card.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="py-2 px-6 rounded-md text-sm sm:text-base bg-[#ff8c24] text-white hover:bg-[#e97d1f] transition-all duration-300"
-                  >
-                    Read More
-                  </a>
+                  <div className="py-4 flex justify-center">
+                    <Link
+                      to={card.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-2 px-6 rounded-md text-sm sm:text-base bg-[#ff8c24] text-white hover:bg-[#e97d1f] transition-all duration-300"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               ))}
             </Slider>

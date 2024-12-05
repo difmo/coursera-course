@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Classcodingpages = () => {
   const courses = [
@@ -306,39 +307,44 @@ const Classcodingpages = () => {
   ];
 
   return (
-    
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#008ECC]"
-    style={{
-      backgroundImage: `url('/bg.svg')`,
-      background:'cover', 
-      backgroundSize:'100%',
-      // backgroundRepeat: 'no-repeat',
-    }}>
-  
-      <div className="flex flex-col gap-6 p-4 max-w-3xl w-full">
+    <div
+      className="flex flex-col items-center justify-center min-h-screen"
+      style={{
+        backgroundImage: `url('/bg.svg')`,
+        background: "cover",
+        backgroundSize: "100%",
+        // backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className="flex justify-center  py-6">
+        <h1 className="text-6xl font-bold text-gray-800">Class Coding Pages</h1>
+      </div>
+      <div className="flex flex-col gap-6 p-4 max-w-3xl w-full shadow-xl">
         {courses.map((course) => (
           <div
             key={course.id}
-            className="flex flex-col sm:flex-row items-center sm:items-start border p-6 shadow-lg rounded-lg bg-white"
+            className="flex flex-col sm:flex-row items-center sm:items-start border p-6 shadow-lg rounded-lg bg-white min-h-[250px] h-auto" // Added min-h-[250px]
           >
             {/* Image Section */}
             <img
               src={course.img}
               alt={course.heading}
-              className="w-24 h-24 object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 "
+              className="w-64 h-64 object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6"
             />
 
             {/* Content Section */}
-            <div className="flex flex-col justify-between">
-              <h3 className="text-xl font-semibold mb-2">{course.heading}</h3>
-              <a
-                href={course.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline font-medium"
-              >
-                Enroll Now
-              </a>
+            <div className="flex self-center flex-col justify-between ">
+              <h3 className="text-xl font-semibold my-2">{course.heading}</h3>
+              <div className="flex justify-start">
+                <Link
+                  to={course.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-blue-500  border bg hover:underline font-medium p-4 rounded-xl hover:shadow "
+                >
+                  Enroll Now
+                </Link>
+              </div>
             </div>
           </div>
         ))}

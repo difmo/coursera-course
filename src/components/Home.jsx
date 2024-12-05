@@ -15,7 +15,7 @@ function Home() {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
           <div
-            className="flex flex-col justify-center items-start space-y-6 h-full"
+            className="flex flex-col pt-10 justify-center items-start space-y-6 h-full"
             style={{
               backgroundImage: `url('/bg.svg')`,
               background: "cover",
@@ -55,15 +55,15 @@ function Home() {
             </form>
 
             <div className="flex items-center space-x-4">
-              <p className="text-xl text-white">
-                Over <span className="text-[#ff8c24]">150,000 students</span>{" "}
+              <p className="text-xl md:text-2xl text-white font-bold">
+                Over <span className="text-[#ff8c24] ">150,000 students</span>{" "}
                 all over the world.
               </p>
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="relative flex justify-center items-center">
+          <div className="relative flex justify-center items-center ">
             <img
               src="https://odysseymt.com/wp-content/uploads/elementor/thumbs/girl2-1-q9b1112txcsq911nxoca2ek393shthrou1wkxgc074.png"
               alt="girl"
