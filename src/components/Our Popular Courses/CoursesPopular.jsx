@@ -41,24 +41,33 @@ const CoursesPopular = () => {
 
   const settings = {
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 500,
-    dots: true,
-    arrows: false,
+    slidesToShow: 3, // Default: 3 slides on larger screens
+    slidesToScroll: 1, // Scroll one slide at a time
+    speed: 500, // Transition speed
+    dots: true, // Show dots for navigation
+    arrows: false, // Default arrows hidden
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // For tablet screens
         settings: {
-          slidesToShow: 2,
-          arrows: true,
+          slidesToShow: 2, // Show 2 slides
+          arrows: true, // Show arrows
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 768, // For small tablets and larger mobile devices
         settings: {
-          slidesToShow: 1,
-          arrows: true,
+          slidesToShow: 1, // Show only 1 slide
+          arrows: true, // Show arrows
+          dots: false, // Hide dots to save space on small screens
+        },
+      },
+      {
+        breakpoint: 480, // For very small screens (e.g., mobile portrait)
+        settings: {
+          slidesToShow: 1, // Show 1 slide
+          arrows: false, // Hide arrows
+          dots: false, // Hide dots as well for cleaner UI
         },
       },
     ],
@@ -74,24 +83,24 @@ const CoursesPopular = () => {
       </header>
 
       {/* Slider Section */}
-      <main className="flex-grow p-4 sm:p-8">
+      <main className="flex-grow p-4 ">
         <section>
           <div className="relative">
             <Slider {...settings}>
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className="p-4 rounded-lg shadow-lg bg-white flex flex-col items-center space-y-4 h-full"
+                  className="p-4 rounded-lg shadow-lg bg-white flex flex-col items-center space-y-4 h-full w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1rem)] mx-auto"
                 >
                   <img
                     src={card.imgSrc}
                     alt={card.title}
-                    className="w-full h-48 md:h-56 object-cover rounded-lg"
+                    className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg"
                   />
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-800 text-center">
                     {card.title}
                   </h3>
-                  <p className="text-gray-600 text-sm sm:text-base px-4 text-center line-clamp-3">
+                  <p className="text-gray-600 text-sm sm:text-base py-4 px-4 text-center line-clamp-3">
                     {card.description}
                   </p>
                   <a

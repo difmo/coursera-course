@@ -7,7 +7,11 @@ const offerings = [
     title: "Artificial Intelligence",
     image:
       "https://img.freepik.com/free-photo/ai-nuclear-energy-future-innovation-disruptive-technology_53876-129784.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted  ",
-    points: ["Machine Learning (ML)", "Natural Language Processing", "Computer Vision"],
+    points: [
+      "Machine Learning (ML)",
+      "Natural Language Processing",
+      "Computer Vision",
+    ],
     button: "Read more",
     link: "https://coursya.com/product/coursera/ai-product-management-specialization/?utm_source=LinkedIn%20&utm_campaign=sr", // External link for this offering
   },
@@ -16,7 +20,11 @@ const offerings = [
     title: "Data Science",
     image:
       "https://img.freepik.com/free-vector/illustration-social-media-concept_53876-18141.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted",
-    points: ["Data Analysis and Visualization", "Statistical Modeling", "Machine Learning Techniques"],
+    points: [
+      "Data Analysis and Visualization",
+      "Statistical Modeling",
+      "Machine Learning Techniques",
+    ],
     button: "Read more",
     link: "https://cpe.iiitb.ac.in/courses/epgp-data-science", // External link for this offering
   },
@@ -25,7 +33,11 @@ const offerings = [
     title: "Big Data",
     image:
       "https://img.freepik.com/free-vector/abstract-particles-dark-background_1217-1472.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted ",
-    points: ["Distributed Computing", "Data Storage and Management", "Real-time Data Processing"],
+    points: [
+      "Distributed Computing",
+      "Data Storage and Management",
+      "Real-time Data Processing",
+    ],
     button: "Read more",
     link: "https://coursya.com/product/coursera/google-project-management-2/?utm_source=LinkedIn%20&utm_campaign=sr", // External link for this offering
   },
@@ -36,7 +48,7 @@ const offerings = [
       "https://img.freepik.com/free-vector/people-use-smart-technology-life-business_81522-3214.jpg?uid=R175915010&ga=GA1.1.1302421477.1730100475&semt=ais_tags_boosted",
     points: ["AWS", "Docker", "Cloud Security and Compliance "],
     button: "Read more",
-    link: "https://cloud.google.com/learn/training", // External link for this offering
+    link: "https://cloud.google.com/learn/training", 
   },
 ];
 
@@ -48,7 +60,7 @@ const OurOfferings = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-2xl sm:text-3xl font-bold text-center mb-8 text-indigo-600"
+          className="text-2xl sm:text-3xl font-bold text-center mb-8 text-black"
         >
           Letest Courses
         </motion.h2>
