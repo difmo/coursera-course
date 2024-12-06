@@ -205,5 +205,6 @@ function Onlinetraining() {
     </div></>
   );
 }
+// o;skdfj;sodklzjfosdklx
 
 export default Onlinetraining;
