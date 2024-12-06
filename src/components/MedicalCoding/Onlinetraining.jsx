@@ -92,6 +92,7 @@ function Onlinetraining() {
   } = online[0];
 
   return (
+    < >
     <div className="bg-gray-50">
       {/* Hero Section */}
       <motion.div
@@ -201,8 +202,9 @@ function Onlinetraining() {
           </Slider>
         </div>
       </div>
-    </div>
+    </div></>
   );
 }
+// o;skdfj;sodklzjfosdklx
 
 export default Onlinetraining;

@@ -1,35 +1,67 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ContentUs = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center py-12 px-6 sm:px-8">
+    <div className=" bg-[#f3fbff] flex flex-col justify-center items-center py-4 px-6 sm:px-8">
       <div className="text-center">
-        <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+        <h1 className="text-6xl font-extrabold text-gray-700 py-14">
           Flexible learning options that fit your life
         </h1>
-        <p className="text-xl text-gray-600 mb-6">
+        <p className="text-2xl text-gray-600 my-5">
           Ready to unlock your potential?
         </p>
 
-        <div className="space-x-4">
-          <a
-            href="tel:7317001012"
-            className="inline-block px-6 py-3 text-white bg-blue-600 rounded-lg text-lg font-medium hover:bg-blue-700"
+        <div className="space-x-4 py-3">
+          <Link
+            to="tel:7317001012"
+            className="inline-block px-6 py-3 text-gray-600 bg-[#a5e4ff] rounded-lg text-lg font-medium"
           >
             Call us at 7317001012
-          </a>
-          <a
-            href="mailto:classcourse25@gmail.com"
-            className="inline-block px-6 py-3 text-white bg-green-600 rounded-lg text-lg font-medium hover:bg-green-700"
+          </Link>
+          <Link
+            to="mailto:classcourse25@gmail.com"
+            className="inline-block px-6 py-3 text-gray-600 bg-[#a5e4ff] rounded-lg text-lg font-medium"
           >
             Email us at classcourse25@gmail.com
-          </a>
+          </Link>
         </div>
 
-        <div className="mt-8 text-lg font-semibold text-gray-700">
-          <p>
-            #ClassCourse #PersonalizedLearning #OnlineEducation
-            #FutureofLearning
+        <div className="mt-8 text-lg  font-semibold text-gray-700">
+          <p className="space-x-4">
+            <button
+              onClick={() => (window.location.href = "Classcodingpages")}
+              className="text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+            >
+              ClassCourse
+            </button>
+            <button
+              onClick={() =>
+                (window.location.href =
+                  "https://www.example.com/personalizedlearning")
+              }
+              className="text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+            >
+              PersonalizedLearning
+            </button>
+            <button
+              onClick={() =>
+                (window.location.href =
+                  "https://www.example.com/onlineeducation")
+              }
+              className="text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+            >
+              OnlineEducation
+            </button>
+            <button
+              onClick={() =>
+                (window.location.href =
+                  "https://www.example.com/futureoflearning")
+              }
+              className="text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+            >
+              FutureofLearning
+            </button>
           </p>
         </div>
       </div>

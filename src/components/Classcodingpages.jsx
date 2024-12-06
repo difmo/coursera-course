@@ -316,9 +316,12 @@ const Classcodingpages = () => {
         // backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="flex justify-center  py-6">
-        <h1 className="text-6xl font-bold text-gray-800">Class Coding Pages</h1>
+      <div className="flex justify-center items-center py-6 ps-4">
+        <h1 className="text-4xl flex justify-center sm:text-5xl md:text-6xl font-bold text-gray-800">
+          Class Coding Pages
+        </h1>
       </div>
+
       <div className="flex flex-col gap-6 p-4 max-w-3xl w-full shadow-xl">
         {courses.map((course) => (
           <div

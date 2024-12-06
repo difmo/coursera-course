@@ -3,7 +3,7 @@ import { motion } from "framer-motion"; // Import motion
 
 function EnrollNow() {
   return (
-    <div className="flex items-center justify-center py-12 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white">
+    <div className="flex items-center justify-center py-12 bg-gradient-to-r from-blue-600 via-indigo-500 to-[#7ed8ff] text-white">
       <div className="text-center space-y-6 max-w-4xl px-4 w-full">
         {/* Enroll Button with Motion */}
         <div className="flex justify-center">
@@ -46,7 +46,7 @@ function EnrollNow() {
             transition={{ duration: 1, delay: 0.8 }}
           >
             <span className="bg-white text-black px-3 py-1 rounded-lg font-semibold shadow-md">
-              +91-98181 74285
+              +91-7317001012
             </span>
           </motion.p>
           <motion.p
@@ -56,7 +56,7 @@ function EnrollNow() {
             transition={{ duration: 1, delay: 0.9 }}
           >
             <span className="bg-white text-black px-3 py-1 rounded-lg font-semibold shadow-md">
-              classcourse25@gmail.com
+            classcourse25@gmail.com
             </span>
           </motion.p>
         </div>
