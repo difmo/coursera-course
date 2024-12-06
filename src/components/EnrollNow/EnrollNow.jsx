@@ -2,7 +2,7 @@ import React from "react";
 
 function EnrollNow() {
   return (
-    <div className="flex items-center justify-center py-12 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white">
+    <div className="flex items-center justify-center py-12 bg-gradient-to-r from-blue-600 via-indigo-500 to-[#7ed8ff] text-white">
       <div className="text-center space-y-6 max-w-4xl px-4 w-full">
         {/* Enroll Button */}
         <div className="flex justify-center">
@@ -25,12 +25,12 @@ function EnrollNow() {
         <div className="space-y-4 text-lg sm:text-xl md:text-2xl">
           <p className="flex items-center justify-center space-x-2">
             <span className="bg-white text-black px-3 py-1 rounded-lg font-semibold shadow-md">
-              +91-98181 74285
+              +91-7317001012
             </span>
           </p>
           <p className="flex items-center justify-center space-x-2">
             <span className="bg-white text-black px-3 py-1 rounded-lg font-semibold shadow-md">
-              classcourse25@gmail.com
+            classcourse25@gmail.com
             </span>
           </p>
         </div>

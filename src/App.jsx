@@ -14,6 +14,7 @@ import CoursesPopular from "./components/Our Popular Courses/CoursesPopular";
 import AboutPage from "./components/About/AboutPage";
 import ScrollToTop from "./components/Scrolltop";
 import ContactUs from "./components/Blogs/Contact/ContactUs";
+import OurBlogs from "./components/Blogs/OurBlogs";
 function App() {
   return (
     <Router>
@@ -33,7 +34,7 @@ function App() {
           <Route path="CoursesPopular" element={<CoursesPopular />} />
           <Route path="ContactUs" element={<ContactUs />} />
           <Route path="AboutPage" element={<AboutPage />} />
-          
+          <Route path="OurBlogs" element={<OurBlogs />} />
         </Route>
       </Routes>
     </Router>
