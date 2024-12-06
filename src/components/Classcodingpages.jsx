@@ -42,7 +42,7 @@ const Classcodingpages = () => {
     {
       id: 7,
       heading: "Meta UI/UX Design",
-      link: "https://lnkd.in/gjCp7x8E",
+      link: "https://www.coursera.org/learn/principles-of-ux-ui-design?irclickid=UiHQrKW8XxyKTNBzH1yZnU6OUkCVHt29d30Qxw0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=5092896&utm_content=b2c",
       img: "https://tse2.mm.bing.net/th?id=OIP.S2aJUN1opzxXr-tWYQWQ-AHaDy&pid=Api&P=0&h=180",
     },
     {
@@ -66,25 +66,25 @@ const Classcodingpages = () => {
     {
       id: 11,
       heading: "Free Financial Modeling 101 Course",
-      link: "https://bit.ly/3A1bSt1",
+      link: "https://www.financialmodelingeducation.com/",
       img: "https://tse2.mm.bing.net/th?id=OIP.7nWhSX7s0qh9fv2CCxKL7QHaEK&pid=Api&P=0&h=180",
     },
     {
       id: 12,
       heading: "AWS Cloud Certifications (Cybersecurity)",
-      link: "https://lnkd.in/gaDGWdkm",
+      link: "https://explore.skillbuilder.aws/learn/signin",
       img: "https://tse4.mm.bing.net/th?id=OIP.ZMMENEhU86Qa2JV3xSeVBwHaHa&pid=Api&P=0&h=180",
     },
     {
       id: 13,
       heading: "Innovative Teaching with ChatGPT",
-      link: "https://lnkd.in/gbSf5Ebw",
+      link: "https://www.coursera.org/learn/chatgpt-innovative-teaching?irclickid=UiHQrKW8XxyKTNBzH1yZnU6OUkCVHv1pd30Qxw0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=5815485&utm_content=b2c",
       img: "https://tse4.mm.bing.net/th?id=OIP.-yD6qjf5ihgWRaXsYkkMsAHaHa&pid=Api&P=0&h=180",
     },
     {
       id: 14,
       heading: "Design Thinking for Innovation",
-      link: "https://lnkd.in/gMjjahbX",
+      link: "https://www.coursera.org/learn/uva-darden-design-thinking-innovation?irclickid=UiHQrKW8XxyKTNBzH1yZnU6OUkCVHvyRd30Qxw0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=5815485&utm_content=b2c",
       img: "https://tse3.mm.bing.net/th?id=OIP.XWmvjb-8kdgV53M-X7ljcgHaFK&pid=Api&P=0&h=180",
     },
     {
@@ -96,13 +96,13 @@ const Classcodingpages = () => {
     {
       id: 16,
       heading: "Digital Forensics Essentials (DFE)",
-      link: "https://lnkd.in/gPrkYcDH",
+      link: "https://codered.eccouncil.org/?logged=false",
       img: "https://tse2.mm.bing.net/th?id=OIP.pcQwzzPFnMzUEeWWRYsVHwHaEK&pid=Api&P=0&h=180",
     },
     {
       id: 17,
       heading: "Ethical Hacking Essentials (EHE)",
-      link: "https://lnkd.in/gRBGCud7",
+      link: "https://codered.eccouncil.org/?logged=false",
       img: "https://tse4.mm.bing.net/th?id=OIP.XyyrPUXgAZSV9In50Y83LwHaFL&pid=Api&P=0&h=180",
     },
     {
@@ -120,13 +120,13 @@ const Classcodingpages = () => {
     {
       id: 20,
       heading: "Google Cloud Training",
-      link: "https://lnkd.in/get8rnkh",
+      link: "https://cloud.google.com/learn/training",
       img: "https://tse4.mm.bing.net/th?id=OIP.6NdmMJ0i5OVV7bO8rF3KMwHaHa&pid=Api&P=0&h=180",
     },
     {
       id: 21,
       heading: "Finance 101 Course: Budgeting",
-      link: "https://bit.ly/3KxBUZC",
+      link: "https://www.bpidk.org/finance-consulting-services",
       img: "https://tse4.mm.bing.net/th?id=OIP.cXK0y76m9vIjiIIH3Q9BygHaE8&pid=Api&P=0&h=180",
     },
     {
@@ -343,7 +343,7 @@ const Classcodingpages = () => {
                   to={course.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white bg-blue-500  border bg hover:underline font-medium p-4 rounded-xl hover:shadow "
+                  className="text-white bg-blue-500  border bg  font-medium p-4 rounded-xl hover:shadow "
                 >
                   Enroll Now
                 </Link>
