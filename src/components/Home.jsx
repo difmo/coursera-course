@@ -11,21 +11,21 @@ import OurBlogs from "./Blogs/OurBlogs";
 function Home() {
   return (
     <>
-      <div className="bg-[#008ECC]  px-4 md:px-20 h-auto flex items-center ">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left Column */}
-          <div
-            className="flex flex-col pt-10 justify-center items-start space-y-6 h-full"
-            style={{
+      <div className="bg-[#008ECC]  px-4 md:px-20 h-auto flex items-center "   style={{
               backgroundImage: `url('/bg.svg')`,
               background: "cover",
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
-            }}
+            }}>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left Column */}
+          <div
+            className="flex flex-col pt-10 justify-center items-start space-y-6 h-full"
+          
           >
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
-              Join Medical Coding, a{" "}
-              <span className="text-[#ff8c24]">high-growth</span> career
+              Join Medical Coding, A{" "}
+              <span className="text-[#ff8c24]">High-Growth</span> Career
             </h2>
             <p className="text-base sm:text-lg text-gray-100">
               An education that provides higher growth.
@@ -49,8 +49,7 @@ function Home() {
                 <input
                   type="submit"
                   value="Request a Quote"
-                  className="w-full sm:w-auto px-6 py-3 bg-[#ff8c24] text-white rounded-md hover:bg-[#ff7024] transition duration-200 cursor-pointer"
-                />
+                  className="bg-[#FF8C24] text-white px-6 py-3 rounded-full  hover:bg-[#FF7A19]"                />
               </div>
             </form>
 

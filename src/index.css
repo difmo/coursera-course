@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Global font settings */
+@layer base {
+    /* Set Work Sans as the default font */
+    html {
+      font-family: "Work Sans", sans-serif;
+    }
+  }

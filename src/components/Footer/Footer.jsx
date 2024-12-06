@@ -8,18 +8,19 @@ const Footer = () => {
 
   return (
     <footer
-      className="pt-4 bg-gray-600 text-white"
+      className=" bg-gray-600 text-white"
       style={{
         backgroundImage: `url('/footerbg.svg')`,
         background: "cover",
-        backgroundSize: "20%",
+        backgroundSize: "18%",
         backgroundRepeat: "no-repeat",
+        backgroundPosition:"90%"
       }}
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8"
+        className="container py-11 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* First Section */}

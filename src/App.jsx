@@ -15,6 +15,7 @@ import AboutPage from "./components/About/AboutPage";
 import ScrollToTop from "./components/Scrolltop";
 import ContactUs from "./components/Blogs/Contact/ContactUs";
 import OurBlogs from "./components/Blogs/OurBlogs";
+import PlacementSection from "./components/PlacementSection";
 function App() {
   return (
     <Router>
@@ -35,6 +36,7 @@ function App() {
           <Route path="ContactUs" element={<ContactUs />} />
           <Route path="AboutPage" element={<AboutPage />} />
           <Route path="OurBlogs" element={<OurBlogs />} />
+          <Route path="PlacementSection" element={<PlacementSection />} />
         </Route>
       </Routes>
     </Router>

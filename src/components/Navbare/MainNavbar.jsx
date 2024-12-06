@@ -49,7 +49,7 @@ const Navbar = () => {
         <img
           src={logo}
           alt="Logo"
-          className="h-12 md:h-20  transition-all duration-300"
+          className="h-12 md:h-18  transition-all duration-300"
         />
       </div>
 
@@ -70,7 +70,7 @@ const Navbar = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <button className="text-gray-700 text-lg font-medium hover:text-[#FF8C24] flex items-center">
+          <button className="text-gray-700 font-medium hover:text-[#FF8C24] flex items-center">
             Medical Coding Training
             <span className="ml-1">{dropdownOpen ? "▲" : "▼"}</span>
           </button>
@@ -81,13 +81,13 @@ const Navbar = () => {
           >
             <Link
               to="Onlinetraining"
-              className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+              className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] "
             >
               Online Training
             </Link>
             <Link
               to="ClassroomTrain"
-              className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+              className="block px-6 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] "
             >
               Classroom Training
             </Link>
@@ -95,19 +95,19 @@ const Navbar = () => {
         </div>
         <Link
           to="CoursesPopular"
-          className="text-gray-700 text-lg font-medium hover:text-[#FF8C24]"
+          className="text-gray-700 font-medium hover:text-[#FF8C24]"
         >
           Our Courses
         </Link>
         <Link
           to="/PlacementSection"
-          className="text-gray-700 text-lg font-medium hover:text-[#FF8C24]"
+          className="text-gray-700  font-medium hover:text-[#FF8C24]"
         >
           Placement
         </Link>
         <Link
           to="Classcodingpages"
-          className="text-[#FF8C24] text-lg font-medium cursor-pointer"
+          className="text-[#FF8C24]  font-medium cursor-pointer"
         >
           Class Coding
         </Link>
@@ -118,36 +118,36 @@ const Navbar = () => {
         <div className="absolute top-full  left-0 w-full bg-white shadow-lg md:hidden">
           <Link
             to="#online-training"
-            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] "
           >
             Online Training
           </Link>
           <Link
             to="#classroom-training"
-            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] "
           >
             Classroom Training
           </Link>
           <Link
             to="CoursesPopular"
-            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] "
           >
             Our Courses
           </Link>
           <Link
             to=""
-            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] text-lg"
+            className="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#FF8C24] "
           >
             Placement
           </Link>
           <Link
             to="Classcodingpages"
-            className="block px-6 py-3 text-[#FF8C24] font-medium text-lg"
+            className="block px-6 py-3 text-[#FF8C24] font-medium "
           >
             Classcoding Coding
           </Link>
           <div className="px-6 py-3">
-            <button className="bg-[#FF8C24] w-full text-white py-3 text-lg rounded-md hover:bg-[#FF7A19]">
+            <button className="bg-[#FF8C24] w-full text-white py-3  rounded-md hover:bg-[#FF7A19]">
               Enroll Me
             </button>
           </div>
@@ -156,7 +156,7 @@ const Navbar = () => {
 
       {/* Enroll Button */}
       <div className="hidden md:block">
-        <button className="bg-[#FF8C24] text-white px-6 py-3 rounded-md text-lg hover:bg-[#FF7A19]">
+        <button className="bg-[#FF8C24] text-white px-6 py-2 rounded-full  hover:bg-[#FF7A19]">
           Enroll Now
         </button>
       </div>
