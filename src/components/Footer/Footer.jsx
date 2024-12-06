@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="pt-4 bg-[#91deff] text-gray-700"
+      className="pt-4 bg-gray-600 text-white"
       style={{
         backgroundImage: `url('/footerbg.svg')`,
         background: "cover",
