@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 
 const scheduleItems = [
@@ -17,8 +17,12 @@ const courseContentItems = [
 ];
 
 function ClassroomTrain() {
+  useEffect(() => {
+    // Optional: You can add additional logic here if you want to trigger actions when the page loads
+  }, []);
+
   return (
-    <div className="max-w-7xl mx-auto px-4 mt-28">
+    <div className="max-w-7xl mx-auto px-4 mt-16">
       {/* Heading Section with Motion Animation */}
       <motion.section
         className="py-12 text-center"
@@ -27,7 +31,7 @@ function ClassroomTrain() {
         transition={{ duration: 1 }}
       >
         <div className="text-center py-16 px-6 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg">
-          <h1 className="text-3xl font-semibold sm:text-4xl md:text-7xl">
+          <h1 className="text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl">
             Classroom Training
           </h1>
           <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl py-5">
@@ -46,8 +50,8 @@ function ClassroomTrain() {
             className="w-full rounded-lg shadow-lg max-h-[400px] object-cover"
             src="https://odysseymt.com/wp-content/uploads/2023/08/hgf.png"
             alt="Classroom Image"
-            initial={{ x: "-100vw" }}
-            animate={{ x: 0 }}
+            initial={{ opacity: 0, x: "-100vw" }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 25 }}
           />
         </div>
@@ -95,9 +99,11 @@ function ClassroomTrain() {
               className="w-full rounded-lg shadow-lg max-h-[400px] object-cover"
               src="https://odysseymt.com/wp-content/uploads/2023/08/IMG-9458-768x512.jpg"
               alt="Classroom 1"
-              initial={{ x: "-100vw" }}
-              animate={{ x: 0 }}
+              initial={{ opacity: 0, x: "-100vw" }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ type: "spring", stiffness: 100, damping: 25 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }} // Triggers animation when the image comes into the viewport
             />
           </div>
           <div className="w-full md:w-1/2">
@@ -105,9 +111,11 @@ function ClassroomTrain() {
               className="w-full rounded-lg shadow-lg max-h-[400px] object-cover"
               src="https://odysseymt.com/wp-content/uploads/2023/08/image_50441729-2048x1536.jpg"
               alt="Classroom 2"
-              initial={{ x: "100vw" }}
-              animate={{ x: 0 }}
+              initial={{ opacity: 0, x: "100vw" }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ type: "spring", stiffness: 100, damping: 25 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }} // Triggers animation when the image comes into the viewport
             />
           </div>
         </div>
