@@ -3,35 +3,35 @@ import { Link } from "react-router-dom";
 
 const ContentUs = () => {
   return (
-    <div className=" bg-[#f3fbff] flex flex-col justify-center items-center py-4 px-6 sm:px-8">
+    <div className="bg-[#f3fbff] flex flex-col justify-center items-center py-8 px-6 sm:px-8">
       <div className="text-center">
-        <h1 className="text-6xl font-extrabold text-gray-700 py-14">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-700 py-8 sm:py-14">
           Flexible learning options that fit your life
         </h1>
-        <p className="text-2xl text-gray-600 my-5">
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 my-4 sm:my-5">
           Ready to unlock your potential?
         </p>
 
-        <div className="space-x-4 py-3">
+        <div className="space-y-4 sm:space-x-4 sm:space-y-0 py-4 sm:py-3">
           <Link
             to="tel:7317001012"
-            className="inline-block px-6 py-3 text-gray-600 bg-[#a5e4ff] rounded-lg text-lg font-medium"
+            className="inline-block w-full sm:w-auto px-6 py-3 text-gray-600 bg-[#a5e4ff] rounded-lg text-lg font-medium text-center"
           >
             Call us at 7317001012
           </Link>
           <Link
             to="mailto:classcourse25@gmail.com"
-            className="inline-block px-6 py-3 text-gray-600 bg-[#a5e4ff] rounded-lg text-lg font-medium"
+            className="inline-block w-full sm:w-auto px-6 py-3 text-gray-600 bg-[#a5e4ff] rounded-lg text-lg font-medium text-center"
           >
             Email us at classcourse25@gmail.com
           </Link>
         </div>
 
-        <div className="mt-8 text-lg  font-semibold text-gray-700">
-          <p className="space-x-4">
+        <div className="mt-6 sm:mt-8 text-lg sm:text-xl font-semibold text-gray-700 flex justify-center">
+          <p className="space-y-4 sm:space-x-4 sm:space-y-0 flex flex-col sm:flex-row items-center">
             <button
               onClick={() => (window.location.href = "Classcodingpages")}
-              className="text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+              className="w-full sm:w-auto text-white bg-blue-500 px-6 py-3 rounded-md hover:bg-blue-600 text-center"
             >
               ClassCourse
             </button>
@@ -40,7 +40,7 @@ const ContentUs = () => {
                 (window.location.href =
                   "https://www.example.com/personalizedlearning")
               }
-              className="text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+              className="w-full sm:w-auto text-white bg-blue-500 px-6 py-3 rounded-md hover:bg-blue-600 text-center"
             >
               PersonalizedLearning
             </button>
@@ -49,7 +49,7 @@ const ContentUs = () => {
                 (window.location.href =
                   "https://www.example.com/onlineeducation")
               }
-              className="text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+              className="w-full sm:w-auto text-white bg-blue-500 px-6 py-3 rounded-md hover:bg-blue-600 text-center"
             >
               OnlineEducation
             </button>
@@ -58,7 +58,7 @@ const ContentUs = () => {
                 (window.location.href =
                   "https://www.example.com/futureoflearning")
               }
-              className="text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+              className="w-full sm:w-auto text-white bg-blue-500 px-6 py-3 rounded-md hover:bg-blue-600 text-center"
             >
               FutureofLearning
             </button>
