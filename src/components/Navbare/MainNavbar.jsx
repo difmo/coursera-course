@@ -100,7 +100,7 @@ const Navbar = () => {
           Our Courses
         </Link>
         <Link
-          to="#placement"
+          to="/PlacementSection"
           className="text-gray-700 text-lg font-medium hover:text-[#FF8C24]"
         >
           Placement
